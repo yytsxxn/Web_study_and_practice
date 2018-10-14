@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <!--外部样式-->
+    <link rel="stylesheet" href="style.css"/>
+
+    <!--内部样式-->
+    <style>
+
+        /*id选择器*/
+        #div1{
+            width: 30px;
+            height: 50px;
+            background: black;
+        }
+        
+        /*标签选择器*/
+        div{
+            background:green;
+            color:dodgerblue;
+        }
+
+        /*class选择器*/
+        .aa{
+            width:100px;
+            height: 100px;
+            background: yellow;
+        }
+
+        /*后代选择器*/
+        div span{
+            color: pink;
+        }
+
+        /*子代选择器*/
+        div>span{
+            color:tomato;
+        }
+
+        #ul1 .bb{
+            color:mediumvioletred;
+        }
+
+        #ul2 li{
+            color:orangered;
+        }
+
+        /*分组选择器，群组选择器 li可以继承ul属性*/
+        p,ol{
+            color:#bfa;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!--内联样式  优先级大于内部样式-->
+    <div style="widows: 80px; height:20px; background: red;">
+        word1
+    </div>
+
+    <div>
+        word2
+    </div>
+
+    <div id="div1" style="width: 600px; height:40px; background:gray;"> 
+        word3
+    </div>
+
+    <div id="div2">2222222222 </div>
+    <div class="aa">33333333333</div>
+    <div class="aa">44444444444</div>
+
+    <div>
+        <span>spanspan1</span>
+        <a href="#">这是一个链接</a><!--#：占位，链接不确定时 -->
+        <span>word4</span>
+        <p>xjhshizhizhu<span>spanspan2</span></p>
+    </div>
+
+     <span>spanspan3</span>
+
+     <ul id="ul1"> 
+        <li>11</li>
+        <li class="bb">word5</li>
+        <li class="bb">word6</li>
+     </ul>
+
+     <ul id="ul2">
+        <li>111</li>
+        <li>word7</li>
+        <li>word8</li>
+    </ul>
+
+    <ol>
+        <li>111</li>
+        <li class="bb">word9</li>
+        <li class="bb">word10</li>
+    </ol>
+
+
+</body>
+</html>
