@@ -49,6 +49,7 @@
     <!--超链接 加上http协议 新页面打开-->
     
     <!--列表-->
+    <!--ul内只能放li;li内可以嵌套其它-->
     <ul>
         <li>11</li>
         <li>22</li>
@@ -67,6 +68,7 @@
     </div>
     <div>
         我是div 2222
+        <span style="color:red">唯创</span>网讯hhhhhh
     </div>
 
     <span>
@@ -74,10 +76,16 @@
     </span>
     <span>
         唯创网讯666 222
-    </span>
+    </span><!--行元素，用来写文字-->
+
     <!--
-        行级元素：多个占一行 
-        块级元素：自己占一行
+        行级元素：多个占一行，不能设置宽高 
+        a span laber strong(加粗) b（加粗并重点）
+
+        块级元素：自己占一行,可以设置宽高 
+        h1-h6 p ul ol div table
+
+        行级块元素：既有行元素特性，又有块元素特性 img input 
     -->
 
     <!--表格-->
@@ -110,11 +118,12 @@
         <input type="checkbox" name="hobby">篮球
         <input type="checkbox" name="hobby">乒乓球<!--复选框-->
 
+        <!--下拉框-->
         <select name="" id="">
             <option value="">16级</option>
             <option value="">17级</option>
             <option value="">18级</option>
-        </select><!--下拉框-->
+        </select>
 
         <br>
         <textarea name="" id="" cols="30" rows="10"></textarea><!--文本域-->
@@ -122,7 +131,7 @@
 
         <button>提交</button><!--按钮-->
 
-        <input type="submit" value="提交" > <!--sunmit——提交表单到后台-->
+        <input type="submit" value="提交" > <!--sunmit——提交按钮，提交表单到后台-->
         
     </form>
 
