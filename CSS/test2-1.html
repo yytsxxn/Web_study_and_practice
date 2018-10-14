@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #div1{
+            background-color: blueviolet;
+            background-image: url(../tu.jpeg);
+            height:500px;
+            background-repeat: no-repeat;/*默认背景重复*/
+            background-position: 100px 50px;/*背景位置*/
+
+            background:blueviolet url(../tu.jpeg) 500px no-repeat 100px 50px
+            
+            /*水平（left right center）垂直（top bottom center）*/
+        }
+
+        #div2{
+            background-color: brown;
+            text-align: center;
+            /*文本水平对齐方式 left(默认) center right*/
+
+            /*单行文字垂直居中：行高=高度*/
+            height: 100px;
+            line-height: 100px;
+        }
+        a{
+            text-decoration: line-through; 
+            /*文本修饰：无:none 下划线：underline(链接默认) overline line-through blink*/
+
+            /*color: blue; 设置文本颜色*/
+        }
+        a:link{
+            color: blue;
+        }
+        a:hover{
+            color:chocolate;/*最重要*/
+        }
+        a:visited{
+            color: darkcyan;
+        }
+        a:active{
+            color: blueviolet;
+        }
+        #div3{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            /*字体*/
+            font-size: 50px;/*大小，默认16px*/
+            font-weight: 450;/*粗细，默认400*/
+            font-style: italic;/*字体风格*/
+
+            /*鼠标划过时的形状*/
+            cursor: pointer;
+        }
+        ul{
+            list-style: none;/*列表样式*/
+        }
+
+    
+    </style>
+</head>
+<body>
+    <div id="div1">
+        第一个div
+    </div>
+    <div id="div2">
+        第二个div
+    </div>
+    <a href="#">阿里</a>
+    <div id="div3">
+        第三个div
+    </div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
+</html>
