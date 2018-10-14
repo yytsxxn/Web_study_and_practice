@@ -2,20 +2,26 @@
 <html>
     <!--超文本标记语言-->
 <head lang="en">
-    <!--语言-->
+    <!--lang属性：语言（没什么用的感觉）-->
     <meta charset="utf-8" />
-    <!--字符集-->
+    <!--字符集 其它字符集：GBK GB2312等-->
     <meta name="keywords" content="鲜花，各种鲜花">
     <!--网页页面的关键字-->
     <meta name="description" content="这是一个鲜花的网站">
-    <!--描述-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--对网页进行的描述-->
     <title>题目</title>
     <!--给人看的-->
+
+    <!--
+    以下下暂时不用：
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
+    -->
+
 </head>
+
 <body style="height:3000px">
     <h1>1111</h1><!--最大标题-->
     <h2>1111</h2>
@@ -24,7 +30,9 @@
     <h5>1111</h5>
     <h6>1111</h6><!--最小标题-->
     <!--标题--> 
-    <p>这是P标签——写段落</p>   
+
+    <p>这是P标签——写段落</p>  
+
     <img src="https://avatars3.githubusercontent.com/u/41373796?s=400&u=00dbad0ce571a66f33f01af2a6d062a947f96e7c&v=4"/>
     <!--绝对路径-->
     <img src="touxiang.jpeg"/>
@@ -34,7 +42,9 @@
     <img src="img/1.jpeg" title="这是一张图" alt="图片" />
     <!--同级文件夹下-->
     <!--图片加载不出来——显示alt属性中的信息  鼠标移动到图片上——显示title属性中的信息-->
-    <br>
+
+    <br><!--网页显示时换行-->
+
     <a href="http:www.baidu.com" target="_blank">百度</a>
     <!--超链接 加上http协议 新页面打开-->
     
@@ -70,15 +80,17 @@
         块级元素：自己占一行
     -->
 
+    <!--表格-->
     <table border="1"> 
         <tr>
             <td>1111</td>
             <td>2222</td><!--列-->
         </tr><!--行-->
-
-
-
-    </table><!--表格-->
+        <tr>
+            <td>3333</td>
+            <td>4444</td>
+        </tr>
+    </table>
 
 </body>
 </html>
