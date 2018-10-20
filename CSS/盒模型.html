@@ -16,17 +16,15 @@
             padding: 30px 40px 50px 60px;
             /*
             上，右，下，左 
-            
-            padding:20px 40px;
-            2个值：上下，左右 
-            
+            padding:20px 40px; 2个值：上下，左右 
             1个：都一样 
-            
-            padding:20px 30px 40px
-            3个：上，右，下——左边和右边一样
-            
+            padding:20px 30px 40px; 3个值：上，右，下  左边和右边一样
             在设置背景色后和背景色一样
             */
+            padding-top: 20px;
+            padding-bottom: 30px;
+            padding-left: 30px;
+            padding-right: 50px;
 
             border: 5px solid #000;/*实心边框*/
             border-width: 10px;
@@ -35,7 +33,30 @@
             border-color: blueviolet;
 
             margin: 50px;
-            
+         
+         /*CSS盒模型
+         1、标准盒模型
+            width————设置的是 element（元素）的宽度
+            在设置padding boder时 会相应增大
+
+         2、怪异盒模型
+            ie6以及ie6以下浏览器，不写doctype
+            width————设置的是内容 + padding + boder 的值        
+         */
+
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background:red;
+            padding:30px;
+            border:10px solid #000;
+            margin:100px;
+
+            /*   CSS3语法   box-sizing 将标准盒模型（content-box）转化为怪异盒模型（boder-box） */
+            box-sizing:border-box;
+
+
 
         }
     
@@ -49,10 +70,10 @@
         123456
     </div>
         
-    <div>
+    <div id="div2">
         11111111111111
     </div>
-    
+
     <div>
         333333333
     </div>
