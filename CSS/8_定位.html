@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定位</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+            /*
+            *:通配符，默认选中所有有该属性的元素
+            body默认外边距：8px
+            */
+        }
+        body{
+            height:2000px;
+        }
+        div{
+            width:100px;
+            height:50px;
+            display: inline-block;
+        }
+        #div0{
+            width: 500px;
+            height: 300px;
+            background: #cccccc;
+            margin:50px;
+            position: relative;
+        }
+        #div1{
+            background: red;
+        }
+        #div2{
+            background: yellowgreen;
+            /*position: relative;
+            left:50px;
+            top:100px; */
+            position: absolute;
+            left:50px;
+            top:10px;
+        }
+        #div3{
+            background: blue;
+        }  
+        #div4{
+            width: 50px;
+            height: 100px;
+            background: #ff0000;
+            position: fixed;
+            right:0;
+            bottom:10px;
+
+        }  
+        /*
+            position:relative;  相对定位 
+                                相对于自己原来的位置 
+                                定位后空间不释放
+            position：absolute; 绝对定位  
+                                相对于最近已定位的祖先元素；如果没有最近已定位的祖先元素，就相对于body
+                                定位后空间释放
+            position：fixed     固定定位
+                                相对于浏览器
+                                定位后空间释放
+            position::static    默认值
+        */
+
+    </style>
+</head>
+<body> 
+    <div id="div0">
+        <div id="div1">
+            111
+        </div><div id="div2">
+            222
+        </div><div id="div3">
+            333
+        </div>
+    </div>
+    <div id="div4"></div>
+    <p>111111111111111111111111111111111</p>
+    
+    
+</body>
+</html>
