@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            position: absolute;
+        }
+        #div1{
+            background: red;
+            left:30px;
+            top:100px;
+            z-index:4;
+
+        }
+        #div2{
+            background:green;
+            left:50px;
+            top:150px;
+            z-index:6;/*默认值为0 数字越大，层级越高，显示越在上面*/
+        }
+        #div3{
+            background:blue;
+            left:80px;
+            top:200px;
+
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="div1">1111111111</div>
+    <div id="div2">2222222222</div>
+    <div id="div3">3333333333</div>
+</body>
+</html>

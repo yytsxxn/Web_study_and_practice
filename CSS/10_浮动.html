@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #div1{
+            width: 150px;
+            height: 50px;
+            background: #ff0000;
+            /*float:right; */
+            float: left;
+        }
+        #div2 {
+            width: 150px;
+            height: 50px;
+            background: #0000ff;
+            float: left;
+            /* float:right; */
+        }
+        /*
+            #div3{
+                clear:both;
+            }
+        */
+        .clearfix::after{
+            content:"我是伪元素";/*可以为空，不显示内容*/
+            display: block;
+            clear: both;
+        }
+        /*
+            float:left  right
+            浮动元素 脱离文档流 空间释放
+
+            浮动带来的问题：产生塌陷
+            解决塌陷：
+                1、（父元素）谁没有高加  overflow：hidden;   
+                2、给父元素设置高度
+                3、浮动元素下边加一个兄弟元素 clear:both;（有左有右）（都左浮 clear：left 都右浮 clear：right）
+                4、通过CSS给父元素添加 块级 伪元素 clearfix ：：after(before) clear：both
+        */
+
+    </style>
+</head>
+<body>
+    <div id="div0" class="clearfix">
+        <div id="div1">111111111111</div>
+        <div id="div2">222222222222</div>
+        <!-- <div id="div3"></div> -->
+    </div>
+
+    <h1>111111111111111111111111111</h1>
+
+    <div class="clearfix">
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+            
+    </div>
+    
+</body>
+</html>
