@@ -12,17 +12,31 @@
             height:30px;
             line-height: 30px;
             background: rebeccapurple;
-            overflow: hidden;/*溢出隐藏*/
             /*overflow: scroll;  溢出显示滚动条*/
-
-            text-overflow: ellipsis;/*文本溢出省略...*/
-            white-space: nowrap;/*强制文本不换行*/
+            overflow: hidden;/*单纯文本溢出隐藏*/
+            text-overflow: ellipsis;/*文本溢出省略... */
+            white-space: nowrap;/*强制文本显示在一行 不换行*/
+            white-space: normal;
+            white-space: pre;
+            white-space: pre-wrap;
+            /*
+            文本溢出省略... 
+                overflow: hidden; 
+                text-overflow: ellipsis; 
+                white-space: nowrap;
+            */
+        }
+        #div2{
+            width:200px;
+            height:30px;
+            white-space: nowrap;
+            background:red;
         }
     
     </style>
 </head>
 <body>
-    <div>
+    <div id="div1">
         哈哈哈哈哈哈哈 哈哈哈或 或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或或
     </div>
     
