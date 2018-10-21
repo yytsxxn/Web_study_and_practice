@@ -4,7 +4,10 @@
 <br>能换行不？？&nbsp;&nbsp;&nbsp;&nbsp;这是啥嘞？ xjhsdcz
 <br>开始学习啦~
 <br> HTML标签 ： 1_test.html
-<br> CSS :  2_test.html  基本语法： 3_test.html
+<br> CSS :  
+<br> 2_1选择器类型.html  
+<br> 2_2选择器优先级.html
+<br> 3_CSS基本语法.html
 <br> 4_盒模型。html
 <br> 5_外边距合并.html
 <br> 6_overflow.html
