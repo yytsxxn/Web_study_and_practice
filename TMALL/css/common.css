@@ -43,6 +43,7 @@ a{
     height: 40px;
     line-height: 40px;
     font-size: 12px;
+    float:left;
 }
 .header-login span ,.header-login a{
     color: #999;
@@ -51,8 +52,21 @@ a{
     padding-left: 20px;
 }
 .header-login a:hover{
-    color:red;
+    color:#ff0036;
 }
-
+.header-list{
+    float:right;
+}
+.header-list li{
+    float:left;
+    line-height: 40px;
+    padding: 0 15px 0 20px;
+}
+.header-list li a{
+    color:#999;
+}
+.header-list li a:hover{
+    color:#ff0036;
+}
 
 /* header结束 */
