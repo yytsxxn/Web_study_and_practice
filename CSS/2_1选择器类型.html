@@ -10,28 +10,29 @@
     <!--外部样式-->
     <link rel="stylesheet" href="style.css"/>
 
-    <!--内部样式-->
+    <!--内部样式 与外部样式优先级一样-->
     <style>
 
-        /*id选择器  必须是唯一的*/
+        /*id选择器  必须是唯一的 相同的优先级 写在下面的会覆盖写在上面的 */
         #div1{
             width: 30px;
             height: 50px;
             background: black;
         }
         
-        /*标签选择器*/
-        div{
-            background:green;
-            color:dodgerblue;
-        }
-
-        /*class选择器*/
+        /*class选择器  相同的优先级 写在下面的会覆盖写在上面的 */
         .aa{
             width:100px;
             height: 100px;
             background: yellow;
         }
+
+        /*标签选择器  相同的优先级 写在下面的会覆盖写在上面的 */
+        div{
+            background:green;
+            color:dodgerblue;
+        }
+
 
         /*后代选择器*/
         div span{
@@ -67,7 +68,7 @@
 </head>
 <body>
 
-    <!--内联样式  优先级大于内部样式-->
+    <!--内联样式  优先级大于内部样式    在浏览器控制台显示为 element.style-->
     <div style="widows: 80px; height:20px; background: red;">
         word1
     </div>
@@ -80,7 +81,7 @@
         word3
     </div>
 
-    <div id="div2">2222222222 </div>
+    <div id="div2" class="cc dd ">2222222222 </div>
     <div class="aa">33333333333</div>
     <div class="aa">44444444444</div>
 
