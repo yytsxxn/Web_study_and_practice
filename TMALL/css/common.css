@@ -15,6 +15,23 @@ ul{
     margin: 0 auto;
     /*图片上下有边框--->设置margin：0 auto； auto自适应，左右居中*/
 }
-
-
+.banner1{
+    display: block;
+    height: 80px;
+    background:#f25283 url(../images/banner.jpg) no-repeat center 0;
+}
 /* banner 结束*/
+
+/* header开始 */
+#header{
+    height: 40px;
+    background: #f2f2f2;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.30)
+}
+.wrapper{
+    width:1340px;
+    background: #00ff00;
+    margin: 0 auto;
+}
+
+
