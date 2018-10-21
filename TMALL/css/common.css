@@ -5,6 +5,12 @@
 ul{
     list-style: none;
 }
+body{
+    font:12px/1.5 tahoma,arial,"\5b8b\4f53";
+}
+a{
+    text-decoration: none;
+}
 /* banner 开始*/ 
 .banner{
     /* inline/inline-block （行元素/行级块元素） 通过设置父元素的text-align:center; 设置左右居中 */
@@ -29,9 +35,24 @@ ul{
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.30)
 }
 .wrapper{
-    width:1340px;
-    background: #00ff00;
+    width:1230px;
+    /* background: gray; */
     margin: 0 auto;
+}
+.header-login{
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+}
+.header-login span ,.header-login a{
+    color: #999;
+}
+.header-login a{
+    padding-left: 20px;
+}
+.header-login a:hover{
+    color:red;
 }
 
 
+/* header结束 */
