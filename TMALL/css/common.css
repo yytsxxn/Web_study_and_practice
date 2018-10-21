@@ -75,5 +75,8 @@ a{
 .icon-webicon205{
     font-size: 18px;
 }
-
+#search-extra{
+    height:130px;
+    background: #ffffff;
+}
 /* header结束 */
