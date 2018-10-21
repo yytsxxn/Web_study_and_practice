@@ -35,9 +35,13 @@
             float:left  right
             浮动元素 脱离文档流 空间释放
 
+            浮动：半脱离文档流 不会盖住文字
+            定位：全脱离文档流 会盖住文字
+
+
             浮动带来的问题：产生塌陷
             解决塌陷：
-                1、（父元素）谁没有高加  overflow：hidden;   
+                1、（父元素）谁没有高加  overflow：hidden;  （溢出隐藏）  
                 2、给父元素设置高度
                 3、浮动元素下边加一个兄弟元素 clear:both;（有左有右）（都左浮 clear：left 都右浮 clear：right）
                 4、通过CSS给父元素添加 块级 伪元素 clearfix ：：after(before) clear：both

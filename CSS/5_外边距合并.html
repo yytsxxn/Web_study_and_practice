@@ -27,13 +27,14 @@
             /* overflow: hidden; */
             /* border:1px solid transparent; */
             /* float: left; */
-            position: absolute;
+            /*position: absolute;*/
         }
         #div4{
             width: 200px;
             height: 200px;
             background: #000000;
-            margin-top:10px;
+            margin-top:100px;
+            float:left;
         }
 
         /*外边距合并 : 外边距合并指的是，当两个垂直外边距相遇时，它们将形成一个外边距。
@@ -41,9 +42,14 @@
             父元素和子元素之间显示外边距方法：
             1、父元素overflow:hidden;
             2、父元素加边框（透明边框 1px）
-            3、父元素或者子元素浮动 float
+            3、父元素或者子元素浮动 float  ————>清除浮动
             4、父元素或者子元素定位（绝对定位）position
         */
+
+        h1{
+            background: #000;
+            height: 20px;
+        }
        
     </style>
 
@@ -65,6 +71,7 @@
         </div>
 
     </div>
+    <h1> </h1>
     
 </body>
 </html>
