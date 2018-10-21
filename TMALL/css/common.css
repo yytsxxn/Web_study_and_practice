@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+/* banner 开始*/ 
+.banner{
+    /* inline/inline-block （行元素/行级块元素） 通过设置父元素的text-align:center; 设置左右居中 */
+    background:#f25283;
+}
+.banner img{
+    display: block;
+    margin: 0 auto;
+    /*图片上下有边框--->设置margin：0 auto； auto自适应，左右居中*/
+}
+
+
+/* banner 结束*/
