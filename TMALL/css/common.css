@@ -75,8 +75,13 @@ a{
 .icon-webicon205{
     font-size: 18px;
 }
-#search-extra{
+/* header结束 */
+/* search开始 */
+#search{
     height:130px;
     background: #ffffff;
 }
-/* header结束 */
+.logo{
+    float: left;
+}
+
