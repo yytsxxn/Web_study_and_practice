@@ -64,14 +64,23 @@ a{
 .header-list li{
     float:left;
     line-height: 40px;
-    padding: 0 15px 0 20px;
+    /* height:40px; */
+    /* padding: 0 15px 0 20px; */
 }
-.header-list li a{
+/* .header-list li a{
     color:#999;
-    /* display: block; */
-}
+} */
 .header-list li a:hover{
     color:#ff0036;
+}
+.header-list li>a{
+    color:#999;
+    padding:0 15px 0 10px;
+    display: block;
+}
+.header-list li.list-menu:hover>a{
+    background: #fff;
+    text-decoration: underline;
 }
 .iconfont{
     color:#ff0036;
@@ -80,6 +89,24 @@ a{
 .icon-webicon205{
     font-size: 18px;
 }
+
+.header-list .list-menu{
+    position: relative;
+}
+.arrow{
+    width: 0;
+    height: 0;
+    border:3px solid transparent;
+    border-top-color:#999;
+    position: absolute;
+    right:7px;
+    top:20px;
+}
+.header-list .list-menu:hover .arrow{
+    transform: rotate(180deg);
+    transform-origin: 50% 25%;
+}
+
 /* header结束 */
 /* search开始 */
 #search{
