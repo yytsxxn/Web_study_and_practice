@@ -61,7 +61,7 @@ a{
 .header-list{
     float:right;
 }
-.header-list li{
+.header-list>li{
     float:left;
     line-height: 40px;
     /* height:40px; */
@@ -121,7 +121,7 @@ a{
     border-top: none;
     padding: 9px 8px;
     width:75px;
-    line-height: 30px;
+    line-height: 26px;
     display:none;
 }
 .sub-list a{
@@ -131,6 +131,28 @@ a{
     text-decoration: underline;
 }
 .header-list .list-menu:hover .sub-list{
+    display:block;
+}
+
+.sub-list-collect{
+    position: absolute;
+    left:0;
+    top: 40px;
+    background: #fff;
+    border:1px solid #eee;
+    border-top: none;
+    padding: 9px 7px;
+    width:60px;
+    line-height: 26px;
+    display:none;
+}
+.sub-list-collect a{
+    color:#999;
+}
+.sub-list-collect a:hover{
+    text-decoration: underline;
+}
+.header-list .list-menu:hover .sub-list-collect{
     display:block;
 }
 /* header结束 */
