@@ -13,7 +13,11 @@ a{
 }
 /* banner 开始*/ 
 .banner{
-    /* inline/inline-block （行元素/行级块元素） 通过设置父元素的text-align:center; 设置左右居中 */
+    /* 
+        inline/inline-block （行元素/行级块元素）margin:-3px; 
+        去掉inline-block的竖线格代码压缩后可能有问题
+        通过设置父元素的text-align:center; 设置左右居中 
+    */
     background:#f25283;
 }
 .banner img{
@@ -64,6 +68,7 @@ a{
 }
 .header-list li a{
     color:#999;
+    /* display: block; */
 }
 .header-list li a:hover{
     color:#ff0036;
