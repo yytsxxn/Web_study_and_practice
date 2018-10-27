@@ -71,14 +71,15 @@ a{
     color:#999;
 } */
 .header-list li a:hover{
-    color:#ff0036;
-}
-.header-list li>a{
+     color:#ff0036;
+} 
+.header-list>li>a{
     color:#999;
     padding:0 15px 0 10px;
     display: block;
 }
 .header-list li.list-menu:hover>a{
+    color:#ff0036;
     background: #fff;
     text-decoration: underline;
 }
@@ -101,13 +102,40 @@ a{
     position: absolute;
     right:7px;
     top:20px;
+    transition: transform 0.2s ease;/* 变换 */
 }
 .header-list .list-menu:hover .arrow{
     transform: rotate(180deg);
     transform-origin: 50% 25%;
 }
-
+.header-list li.list-menu-no:hover>a{
+    color:#999;
+    text-decoration: none;
+}
+.sub-list{
+    position: absolute;
+    left:0;
+    top: 40px;
+    background: #fff;
+    border:1px solid #eee;
+    border-top: none;
+    padding: 9px 8px;
+    width:75px;
+    line-height: 30px;
+    display:none;
+}
+.sub-list a{
+    color:#999;
+}
+.sub-list a:hover{
+    text-decoration: underline;
+}
+.header-list .list-menu:hover .sub-list{
+    display:block;
+}
 /* header结束 */
+
+
 /* search开始 */
 #search{
     height:130px;
