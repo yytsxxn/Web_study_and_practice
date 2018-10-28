@@ -2,10 +2,12 @@
 #search{
     width:1230px;
     margin: 0 auto;
+    /* overflow: hidden; */
 }
 .logo{
     float: left;
-    margin-left:-57px;
+    margin-left:-45px;
+    margin-bottom:-3px;
 }
 .search-box{
     float: left;
@@ -47,4 +49,178 @@
 }
 .search-list li.col a{
     color:#ff0036;
+}
+/* search结束 */
+
+/* 水平分类 */
+.inner-cont{
+    height: 35px;
+    line-height: 35px;
+    /* background: #f00; */
+    width: 1031px;
+    margin:0 auto;
+    padding-left:200px;
+    overflow: hidden;
+}
+.inner-cont img{
+    width: 100px;
+    height: 30px;
+    margin-top:2px;
+}
+.inner-cont a{
+    font-size: 16px;
+    font-weight: 500;
+    color:#333;
+    float: left;
+    margin:0 8px;
+}
+
+.inner-cont a:hover{
+    color: #ff0036;
+}
+
+/* 主内容区域 */
+.content{
+    height:1000px;
+    background:url(../images/bg.jpg) center -207px no-repeat;
+}
+.slide-content{
+    width:1230px;
+    height:496px;
+    margin:0 auto;
+    background: #ffff33;
+}
+.category{
+    width:200px;
+    height:500px;  
+}
+.cate-title{
+    width:200px;
+    height: 36px;
+    color: #fff;
+    font-size:16px;
+    background: #ff0036;
+    margin-left:-200px;
+    float:left;
+}
+.cate-title .iconfont{
+    font:14px;
+    color:white;
+    padding:0 8px;
+}
+.main-cate-box{
+    background: rgba(0,0,0,0.55);
+}
+.main-cate{
+    height: 31px;
+    line-height: 31px;
+    padding: 0 8px;
+}
+.main-cate .iconfont{
+    font:14px;
+    color:rgba(255, 255, 255, 0.55);
+    padding:0 3px;
+}
+.main-cate>a{
+    color:rgba(255,255,255,0.75);
+    font-size: 14px;
+}
+.main-cate:hover{
+    background: #fff;
+}
+.main-cate:nth-child(1):hover>a{
+    color:#e54077;
+}
+.main-cate:nth-child(1):hover>i{
+    color:#e54077;
+}
+.main-cate:nth-child(2):hover>a{
+    color:#427def;
+}
+.main-cate:nth-child(2):hover>i{
+    color:#427def;
+}
+.main-cate:nth-child(3):hover>a{
+    color:#6347cd;
+}
+.main-cate:nth-child(3):hover>i{
+    color:#6347cd;
+}
+.main-cate:nth-child(4):hover>a{
+    color:#e54077;
+}
+.main-cate:nth-child(4):hover>i{
+    color:#e54077;
+}
+.main-cate:nth-child(5):hover>a{
+    color:#6347cd;
+}
+.main-cate:nth-child(5):hover>i{
+    color:#6347cd;
+}
+.main-cate:nth-child(6):hover>a{
+    color:#427def;
+}
+.main-cate:nth-child(6):hover>i{
+    color:#427def;
+}
+.main-cate:nth-child(7):hover>a{
+    color:#e54077;
+}
+.main-cate:nth-child(7):hover>i{
+    color:#e54077;
+}
+.main-cate:nth-child(8):hover>a{
+    color:#fa5c5c;
+}
+.main-cate:nth-child(8):hover>i{
+    color:#fa5c5c;
+}
+.main-cate:nth-child(9):hover>a{
+    color:#fa5c5c;
+}
+.main-cate:nth-child(9):hover>i{
+    color:#fa5c5c;
+}
+.main-cate:nth-child(10):hover>a{
+    color:#427def;
+}
+.main-cate:nth-child(10):hover>i{
+    color:#427def;
+}
+.main-cate:nth-child(11):hover>a{
+    color:#e54077;
+}
+.main-cate:nth-child(11):hover>i{
+    color:#e54077;
+}
+.main-cate:nth-child(12):hover>a{
+    color:#427def;
+}
+.main-cate:nth-child(12):hover>i{
+    color:#427def;
+}
+.main-cate:nth-child(13):hover>a{
+    color:#fa5c5c;
+}
+.main-cate:nth-child(13):hover>i{
+    color:#fa5c5c;
+}
+.main-cate:nth-child(14):hover>a{
+    color:#3bc7b0;
+}
+.main-cate:nth-child(14):hover>i{
+    color:#3bc7b0;
+}
+.main-cate:nth-child(15):hover>a{
+    color:#e54077;
+}
+.main-cate:nth-child(15):hover>i{
+    color:#e54077;
+}
+.main-cate:nth-child(16):hover>a{
+    color:#3bc7b0;
+}
+.main-cate:nth-child(16):hover>i{
+    color:#3bc7b0;
 }
