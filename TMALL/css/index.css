@@ -93,6 +93,8 @@
 .category{
     width:200px;
     height:500px; 
+    position: relative;
+    z-index: 2;
 }
 .cate-title{
     width:200px;
@@ -232,8 +234,8 @@
     height: 495px;
     background: #ffffff;
     position: absolute;
-    left: 268px;
-    top:291px;
+    left: 200px;
+    top:0px;
     display: none;
 }
 .category .main-cate:hover .cate-sub-list{
@@ -242,7 +244,7 @@
 .list-left{
     width: 567px;
     height: 462px;
-    background: #ffff33;
+    background: #fff;
     float: left;
     /* padding: 17px 30px; */
     padding: 17px 10px 17px 30px;
@@ -283,4 +285,37 @@
 }
 .left-list-content a.special-color{
     color:#e54077;
+}
+/* 轮播图 */
+.slide-img-box img{
+    width: 1230px;
+    display: block;
+    height: 495px;
+}
+
+.slide-box{
+    width:1230px;
+    height: 495px;
+    position: absolute;
+    top:291px;
+    /* z-index:3; */
+}
+
+.slide-box a{
+    position: absolute;
+    left:0px;
+    
+    /* z-index:-1; */
+}
+.slide-btn-box{
+    position: absolute;
+    bottom:50px;
+    left:50%;
+    background: yellow;
+    width:200px;
+    /* 已知宽度 */
+    /* margin-left:-100px; */
+    /* 不知道宽度  css3 transform: translateX(-50%); */
+    transform: translateX(-50%);
+
 }
