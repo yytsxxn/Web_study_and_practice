@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>       
+        img{
+            width:400px;
+            height:450px;
+        }
+        a{
+            font-size: 14px;
+            text-decoration: none;
+            color:rgba(0, 0, 0, 0.75);
+            text-overflow: hidden;
+        }
+        
+        .center{
+            width:300px;
+            height:20px;
+            
+        }
+        .left{
+            width:400px;
+            height:500px;
+            position:absolute;
+            left:0;
+            top:0;
+            border:10px solid rgba(0, 0, 0, 0.1);
+            
+        }
+        .left .center{
+            
+            position:absolute;
+            top:450px;
+            left:50px;
+            line-height: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .right{
+            width:400px;
+            height:500px;
+            position:absolute;
+            left:420px;
+            top:0;
+            border-top:10px solid rgba(0, 0, 0, 0.1);
+            border-right:10px solid rgba(0, 0, 0, 0.1);
+            border-bottom:10px solid rgba(0, 0, 0, 0.1);
+        }
+        .right .center{
+            width:300px;
+            height:20px;
+            position:absolute;
+            top:450px;
+            left:50px;
+            line-height: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .left .bottom{
+            width:400px;
+            height:20px;
+            position: absolute;
+            top:475px;
+            color:red;           
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            margin:0 auto;
+        }
+        .right .bottom{
+            width:400px;
+            height:20px;
+            position: absolute;
+            top:475px;           
+            color:red;          
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+            margin:0 auto;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="left">
+        
+            <a href="#"><img src="tu/1.jpg"></a> 
+            <div class="center">
+            <a href="#">Apple iPhone XS Max (A2104) 256GB 金色 移动联通电信4G手机 双卡双待</a>
+        </div>
+        <div class="bottom">
+                ¥10999.00
+        </div>
+    </div>
+    <div class="right">       
+        <a href="#"><img src="tu/2.jpg"></a>
+        <div class="center">
+            <a href="#">vivo Z3 4GB+64GB 极光蓝 性能实力派 全面屏游戏手机 移动联通电信全网通4G手机</a>
+            
+        </div>
+        <div class="bottom">
+            ¥1598.00
+        </div>
+    </div>
+    
+</body>
+</html>
