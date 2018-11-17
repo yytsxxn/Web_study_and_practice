@@ -13,17 +13,23 @@
         }
         body{
             background: #000;
-            perspective: 800px;
+            perspective: 800px;  /*离远看 舞台 3D效果*/
+            
         }
+
         .father{
+            width: 200px;
+            height: 200px;
+            margin:50px auto;
+            position: relative;
+            -webkit-transform-style: preserve-3d; /* 指定子元素定位在三维空间内 维持3D效果 */
+            /* perspective: 800px; */
             
-            background:red;
-            position:absolute;
-            left:200px;
-            top:200px;
-            
-            -webkit-transform-style: preserve-3d;
         }
+
+
+         
+
         .father>div{
             width:200px;
             height:200px;
@@ -31,6 +37,7 @@
             font-size: 80px;
             line-height: 200px;
             background: rgba(255,255,255,0.5);
+            border-radius: 10px; /*圆角 */
             position:absolute;
             left:0;
             top:0;
@@ -38,6 +45,7 @@
         .font{
             
             transform: translateZ(100px);
+
         }
         .back{
            
@@ -64,11 +72,11 @@
 </head>
 <body>
     <div class="father">
-        <div class="font">1</div>
-        <div class="back">2</div>
-        <div class="left">3</div>
-        <div class="right">4</div>
-        <div class="top">5</div>
+        <div class="font">2</div>
+        <div class="back">4</div>
+        <div class="left">5</div>
+        <div class="right">3</div>
+        <div class="top">1</div>
         <div class="bottom">6</div>
     </div>
     
