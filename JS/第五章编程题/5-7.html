@@ -7,6 +7,29 @@
     <title>Document</title>
 </head>
 <body>
+
+    <script>
+        var n=prompt("请输入求第几项的值");
+        var a=new Array();
+        a[0]=1;
+        a[1]=1;
+        for(i=2;i<n;i++){
+            a[i]=a[i-1]+a[i-2];
+        }
+        document.write(a[n-1]+"<br>");
     
+    </script>
+        
+    <script>
+        function fun(n){
+            if(n==1||n==2) return 1;
+            return fun(n-1)+fun(n-2);
+        }
+
+        var n=prompt("请输入求第几项的值");
+        document.write ( fun(n) );
+
+    
+    </script>
 </body>
 </html>
