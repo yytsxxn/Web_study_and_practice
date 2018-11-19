@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fun(n){
+            var a,b,c;
+            a=Math.floor(n/1000);
+            b=Math.floor((n-a*1000)/100);
+            c=Math.floor((n-a*1000-b*100)/10);
+            // document.write(a+" "+b+" "+c+" "+"<br>");
+
+            if(a==(b+c)){
+                return 1;
+            }
+            else{
+                return 0;
+            }
+        }
+        var num;
+        for(num=1000;num<=9999;num++){
+            if(num%13==0){
+                if(fun(num)==1){
+                    document.write(num+"<br>");
+                }
+            }
+        }
+    
+    
+    </script>
+    
+</body>
+</html>
