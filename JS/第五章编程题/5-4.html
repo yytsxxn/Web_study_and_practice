@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //判断一个数是否为素数
+        function fun(n){
+            var i,flag=1;
+            for(i=2;i<n;i++){
+                if(n%i==0){
+                    flag=0;
+                    break;
+                }
+            }
+            if(flag==0){
+                return 0;
+            }
+            else{
+                return 1;
+            }
+
+        }
+
+        var num,j=1;
+        for(num=100;num<=1000;num++){
+            if(fun(num)==1){
+                document.write(num);
+                if(j%6==0){
+                    document.write("<br>");
+                }
+                else{
+                    document.write(" ");
+                }
+                j++;
+            }
+        }
+    </script>
+    
+</body>
+</html>
