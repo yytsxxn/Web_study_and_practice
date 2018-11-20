@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num=new Array(7);
+        var i,sum=0;
+        for(i=0;i<7;i++){
+            num[i]= parseFloat (prompt("请输入第"+(i+1)+"门成绩") );
+        }
+        for(i=0;i<7;i++){
+            sum=sum+num[i];
+            if(num[i]<60){
+                document.write(num[i]+"<br>");
+            }
+        }
+        document.write("总成绩："+sum+"<br>");
+        document.write("平均分："+sum/7);
+    </script>
+</body>
+</html>

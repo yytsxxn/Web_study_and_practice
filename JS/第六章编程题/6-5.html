@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fun(){
+            var a= new String( prompt("请输入第一个字符串") );
+            var b= new String( prompt("请输入第二个字符串") );
+            var i,j;
+            for(i=0;i<(a.length<b.length?a.length:b.length);i++,j++){
+                document.write(a[i],b[i]);
+            }
+            a.length<b.length?document.write(b.substr(i)):document.write(a.substr(i));
+        }
+
+        
+        fun();
+    </script>
+    
+</body>
+</html>

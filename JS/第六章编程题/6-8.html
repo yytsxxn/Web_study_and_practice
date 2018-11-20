@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function IsLeapYear(year){
+            if(((year%4)==0)&&((year%100)!=0)||((year%400)==0)){
+                return 1;      
+            }
+            else{
+                return 0;      
+            }
+        }
+        function fun(today){
+            var sum=0;
+            var year=today.getFullYear();
+            var month=today.getMonth();
+            var day=today.getDay();
+            var months=new Array(31,28,31,30,31,30,31,31,30,31,30,31);
+            var flag=IsLeapYear(year);
+            if(flag==1){
+                months[2]=29;
+            }
+            for(i=1;i<month;i++){
+                sum=sum+months[i];
+            }           
+            document.write(sum+day);
+        }
+        var today=new Date();
+        fun(today);
+    </script>
+    
+</body>
+</html>

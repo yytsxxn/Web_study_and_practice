@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fun(a){
+            var i;
+            for(i = 0; i <= a.length; i++){
+                if(a[i] >="0" && a[i]<="9")
+                document.write( a[i] ); 
+                
+            }
+        }
+        var s= new String( prompt("请输入字符串") );
+        
+        // document.write( s +"<br>");
+
+        fun(s);
+    
+    </script>
+    
+</body>
+</html>
