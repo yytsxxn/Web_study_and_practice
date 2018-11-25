@@ -8,6 +8,25 @@
 </head>
 <body>
 
+
+    <script>
+       
+        function fun(n){
+            if(n <=2 )  return 1; 
+            var f1 = 1,f2 = 1, temp;
+            for(var i = 3; i <= n; i++){
+                temp = f1 + f2;
+                f1 = f2;
+                f2 = temp;
+            }
+            return f2;
+        }
+        var n=prompt("请输入求第几项的值");
+        document.write ( fun(n) + "<br>");
+    
+    </script>
+
+    <!-- 数组 -->
     <script>
         var n=prompt("请输入求第几项的值");
         var a=new Array();
@@ -17,19 +36,19 @@
             a[i]=a[i-1]+a[i-2];
         }
         document.write(a[n-1]+"<br>");
-    
+      
     </script>
         
-    <script>
+    <!-- <script>
         function fun(n){
+            // if(n<=2) return 1;
             if(n==1||n==2) return 1;
             return fun(n-1)+fun(n-2);
         }
 
         var n=prompt("请输入求第几项的值");
         document.write ( fun(n) );
+    </script> -->
 
-    
-    </script>
 </body>
 </html>
