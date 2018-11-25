@@ -12,14 +12,33 @@
             var a= new String( prompt("请输入第一个字符串") );
             var b= new String( prompt("请输入第二个字符串") );
             var i,j;
-            for(i=0;i<(a.length<b.length?a.length:b.length);i++,j++){
+            for(i=0; i<(a.length<b.length?a.length:b.length); i++,j++){
                 document.write(a[i],b[i]);
             }
-            a.length<b.length?document.write(b.substr(i)):document.write(a.substr(i));
+            a.length<b.length? document.write(b.substr(i)): document.write(a.substr(i));
+        }      
+        fun();
+        document.write("<br>");
+    </script>
+
+    <script>
+        function merge(s1,s2){
+            // s1.length > s2.length ? s1.length:s2.length;
+            var maxLength = Math.max(s1.length,s2.length);
+            var result = "";
+            for(var i=0; i<maxLength; i++){
+                if(i < s1.length){
+                    result += s1[i];
+                }
+                if(i < s2.length){
+                    result += s2[i];
+                }
+            }
+            return result;
         }
 
-        
-        fun();
+        document.write( merge("123","abcggg"));
+    
     </script>
     
 </body>
