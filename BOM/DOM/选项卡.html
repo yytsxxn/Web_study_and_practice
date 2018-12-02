@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #btn-box{
+            overflow: hidden;
+        }
+        #btn-box li{
+            list-style: none;
+            float:left;
+            width: 80px;
+            height:50px;
+            background: pink;
+            margin-right:3px;
+            line-height:50px;
+            text-align: center;
+            font-size:18px;
+            cursor: pointer;
+        }
+        #btn-box li.selected{
+            background: #f02652;
+        }
+        #content div{
+            width:246px;
+            height:200px;
+            background: rgba(49, 48, 48, 0.25);
+            display: none;
+        }
+        #content div.active{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <ul id="btn-box">
+            <li>1111</li>
+            <li>2222</li>
+            <li>3333</li>
+
+        </ul>
+
+        <div id="content">
+            <div>div111111</div>
+            <div class="active">div222222</div>
+            <div>div333333</div>
+
+        </div>
+
+    </div>
+
+    <script>
+        var ali = document.getElementsByTagName("li");
+        var oContent = document.getElementById("content");
+        var adiv = oContent.getElementsByTagName("div");
+        console.log(adiv);
+        for( var i = 0; i < ali.length; i++){
+
+            ali[i].idx=i;
+
+            ali[i].onclick=function(){
+
+                for( var i = 0; i < ali.length; i++){
+                    ali[i].className=" ";
+                }  
+
+                this.className="selected";
+
+                for( var i = 0; i < adiv.length; i++){
+                    adiv[i].className=" ";
+                }  
+                adiv[this.idx].className="active";   
+            }
+        }
+        
+    
+    </script>
+    
+</body>
+</html>
