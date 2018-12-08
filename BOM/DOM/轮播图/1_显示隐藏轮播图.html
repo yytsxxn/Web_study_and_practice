@@ -27,7 +27,7 @@
         #img-box .active{
             display: block;
         }
-        #btn-box li{
+        #btn-box li,#arrow-box li{
             float: left;
             width: 20px;
             height: 20px;
@@ -38,10 +38,11 @@
             line-height: 20px;
             font-size: 14px;
             border-radius: 5px;
-        }
-        #btn-box li:hover{
             cursor: pointer;
         }
+        /* #btn-box li:hover{
+            cursor: pointer;
+        } */
         #btn-box .selected{
             background: #ff0036;
         }
@@ -49,6 +50,11 @@
             position: absolute;
             right:10px;
             bottom: 10px;
+        }
+        #arrow-box{
+            position: absolute;
+            left:10px;
+            bottom:10px;
         }
 
     </style>
@@ -70,36 +76,103 @@
             <li>4</li>
             <li>5</li>
         </ul>
-
-        <script>
-            var ali = document.getElementsByTagName("li");
-            var adiv = document.getElementById("img-box");
-            var aimg = adiv.getElementsByTagName("img");
-            for( var i = 0; i < ali.length; i++){
-
-                ali[i].idx=i;
-
-                ali[i].onclick=function(){
-
-                    for( var i = 0; i < ali.length; i++){
-                        ali[i].className=" ";
-                    }  
-
-                    this.className="selected";
-
-                    for( var i = 0; i < aimg.length; i++){
-                        aimg[i].className=" ";
-                    }  
-
-                    aimg[this.idx].className="active";   
-                }
-            }
-            
-        
-        
-        </script>
-        
+        <ul id="arrow-box">
+            <li id="prev">&lt;</li>
+            <li id="next">&gt;</li>
+        </ul>
     </div>
+    <script>
+        var oContainer = document.getElementById("container");
+        var oBtnBox = document.getElementById('btn-box');
+        var aBtn = oBtnBox.getElementsByTagName('li');
+        var aImg = document.getElementsByTagName('img');
+        var oNext = document.getElementById('next');
+        var oPrev = document.getElementById('prev');
+        
+        var iNow = 0;
+        for (var i = 0;i < aBtn.length;i++){
+            aBtn[i].index = i;
+            aBtn[i].onclick = function(){
+                iNow=this.index;
+                change(this.index);
+            }
+        }
+        oNext.onclick = function(){
+            iNow++;
+            if(iNow == aBtn.length){
+                iNow = 0;
+            }
+            change(iNow);
+        }
+        oPrev.onclick = function(){
+            iNow--;
+            if(iNow == -1){
+                iNow=aBtn.length-1;
+            }
+            change(iNow);
+        }
+        function change(idx){
+            for(var j=0; j<aBtn.length; j++){
+                aBtn[j].className = "";
+                aImg[j].className = "";
+            }
+
+            aBtn[idx].className = "selected";
+            aImg[idx].className = "active";
+        }
+        
+        function run(){
+                timer = setInterval(function(){
+                oNext.onclick();
+            },1500)
+        }
+        run();
+        // var timer = setInterval(function(){
+        //     oNext.onclick();
+        // },1000)
+        oContainer.onmouseover = function(){
+            clearInterval(timer);
+        }
+        oContainer.onmouseout = function(){
+            run();
+
+            // timer = setInterval(function(){
+            //     oNext.onclick();
+            // },1000)
+        }
+
+
+
+
+        // 单纯数字——选项卡
+        // var ali = document.getElementsByTagName("li");
+        // var adiv = document.getElementById("img-box");
+        // var aimg = adiv.getElementsByTagName("img");
+        // for( var i = 0; i < ali.length; i++){
+
+        //     ali[i].idx=i;
+
+        //     ali[i].onclick=function(){
+
+        //         for( var i = 0; i < ali.length; i++){
+        //             ali[i].className=" ";
+        //         }  
+
+        //         this.className="selected";
+
+        //         for( var i = 0; i < aimg.length; i++){
+        //             aimg[i].className=" ";
+        //         }  
+
+        //         aimg[this.idx].className="active";   
+        //     }
+        // }
+        
+    
+    
+    </script>
+        
+    
 
 
 
