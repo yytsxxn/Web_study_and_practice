@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #container{
+            width: 750px;
+            height: 291px;
+            margin:100px auto;
+            position: relative;
+        }
+        /* 图片 */
+        #img-box img{
+            display: none;
+        }
+        /* 图片 */
+        #img-box .active{
+            display: block;
+        }
+        #btn-box li{
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: rgba(0,0,0,0.5);
+            margin-right: 5px;
+            color:#fff;
+            text-align: center;
+            line-height: 20px;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+        #btn-box li:hover{
+            cursor: pointer;
+        }
+        #btn-box .selected{
+            background: #ff0036;
+        }
+        #btn-box{
+            position: absolute;
+            right:10px;
+            bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <div id="img-box">
+            <img class="active" src="img/1.jpg" alt="">
+            <img src="img/2.jpg" alt="">
+            <img src="img/3.jpg" alt="">
+            <img src="img/4.jpg" alt="">
+            <img src="img/5.jpg" alt="">
+        </div>
+        <ul id="btn-box">
+            <li class="selected">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+
+        <script>
+            var ali = document.getElementsByTagName("li");
+            var adiv = document.getElementById("img-box");
+            var aimg = adiv.getElementsByTagName("img");
+            for( var i = 0; i < ali.length; i++){
+
+                ali[i].idx=i;
+
+                ali[i].onclick=function(){
+
+                    for( var i = 0; i < ali.length; i++){
+                        ali[i].className=" ";
+                    }  
+
+                    this.className="selected";
+
+                    for( var i = 0; i < aimg.length; i++){
+                        aimg[i].className=" ";
+                    }  
+
+                    aimg[this.idx].className="active";   
+                }
+            }
+            
+        
+        
+        </script>
+        
+    </div>
+
+
+
+    
+</body>
+</html>
