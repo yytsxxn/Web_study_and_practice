@@ -8,8 +8,10 @@
 </head>
 <body>
     <div id="div1">11111</div>
-    <div id="div2">22222</div>
-    <div id="div3">33333</div>
+    <div id="div2">
+        22222
+        <div id="div3">33333</div>
+    </div>
 
     <script>
         var oDiv1 = document.getElementById("div1");
@@ -17,16 +19,16 @@
         var oDiv3 = document.getElementById("div3");
 
         function next(elem){
-            do {
+            do{
                 elem = elem.nextSibling;
-            }while(elem && elem.nodeType != 1)
-            return elem ;
+            }while( elem && elem.nodeType != 1)
+            return elem;
         }
 
         var oDiv22 = next(oDiv1);
         oDiv22.style.background = "red";
+        console.log( next(oDiv3) );
 
-        console.log ( (next(oDiv3) ) );
     </script>
 </body>
 </html>
