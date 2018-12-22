@@ -10,13 +10,21 @@
     <script>
         var person1 ={
             name:"zs",
-            age:10
+            age:10,
+            father:{
+                name:"zxx",
+                age:40
+            }
         }
         
         function clone(obj){
             var result = {};
             for(var key in obj){
-            result[key] = obj[key];
+                if(typeof obj[key] == "object"){
+                    result[key] = clone (obj[key]);
+                }else{
+                    result[key] = obj[key];
+                }
             }
             return result;
         }
@@ -24,7 +32,8 @@
         var person3 = clone (person1);
         
         person1.name = "lisi";
-        
+        person1.father.name = "zyy";
+
         console.log(person3);
 
     </script>
