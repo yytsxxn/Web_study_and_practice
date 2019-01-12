@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        // window.onload = function(){ 
+        //     //页面中所有资源加载完执行 
+        //     var oDiv = document.getElementById('div1');
+        //     oDiv.style.background = "red";
+        // }
+
+        $(document).ready(function(){
+            // 文档就绪函数
+            $("#div1").css("background","green");
+
+        })
+
+        // 文档就绪函数简写  页面的结构加载完执行 
+        /*$(function(){
+            // 文档就绪函数
+            // $("#div1").css("background","green");
+            console.log('文档就绪函数');
+        })*/
+
+        // window.onload = function(){ 
+        //     console.log(111);
+        // }
+        // window.onload = function(){
+        //     console.log(222);
+        // }
+
+        $(function(){
+            console.log(1111);
+        })
+        $(function(){
+            console.log(2222);
+        })
+    </script>
+    <div id="div1">111111</div>
+</body>
+</html>
