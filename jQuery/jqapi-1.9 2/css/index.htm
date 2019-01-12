@@ -1,0 +1,953 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>.css() | jQuery API中文文档(适用jQuery 1.0 - jQuery 2.0)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="jQuery,API,中文版,中文文档,中文手册,chm" />
+<meta name="description" content="jQuery API中文文档(适用jQuery 1.0 - jQuery 2.0)" />
+<link rel="shortcut icon" type="image/x-icon" href="http://www.css88.com/jqapi-1.9/favicon.ico" />
+
+<!--<link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />-->
+<link rel="stylesheet" type="text/css" media="screen" href="../cssstyle/main.min.css" tppabs="http://www.css88.com/jqapi-1.9/cssstyle/main.min.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="../cssstyle/style.css" tppabs="http://www.css88.com/jqapi-1.9/cssstyle/style.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="../cssstyle/jquery.css" tppabs="http://www.css88.com/jqapi-1.9/cssstyle/jquery.css" />
+<script type="text/javascript" src="../js/jquery.min.js" tppabs="http://www.css88.com/jqapi-1.9/js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/highlight.js" tppabs="http://www.css88.com/jqapi-1.9/js/highlight.js"></script>
+<script type="text/javascript" src="../js/jquery.ba-bbq.min.js" tppabs="http://www.css88.com/jqapi-1.9/js/jquery.ba-bbq.min.js"></script>
+<script type="text/javascript" src="../js/jquery.ba-dotimeout.min.js" tppabs="http://www.css88.com/jqapi-1.9/js/jquery.ba-dotimeout.min.js"></script>
+<script type="text/javascript" src="../js/main.js" tppabs="http://www.css88.com/jqapi-1.9/js/main.js"></script>
+<!--<script type="text/javascript" src="js/main.min.js"></script>-->
+</head>
+
+<body>
+<div id="header_warp">
+  <div class="header-box">
+    <div class="logo">
+      <h1><a href="../index.htm" tppabs="http://www.css88.com/jqapi-1.9/" title="jQuery API 中文文档(适用jQuery 1.0 - jQuery 2.0)">jQuery API中文文档</a></h1>
+    </div>
+    <ul class="header-nav">
+      <li><a href="../old.html" tppabs="http://www.css88.com/jqapi-1.9/old.html" class="nav-link" title="jQuery API 中文文档（旧版）">旧版</a></li>
+      <li><a href="javascript:if(confirm('http://www.css88.com/jqueryapi  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.css88.com/jqueryapi'" tppabs="http://www.css88.com/jqueryapi" class="nav-link" title="jQuery API 中文文档更新信息">更新信息</a></li>
+      <li><a href="javascript:if(confirm('https://chrome.google.com/webstore/detail/jquery-19-%E4%B8%AD%E6%96%87api/akgcdalfjglabfljlcnklbdndmogiebg  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://chrome.google.com/webstore/detail/jquery-19-%E4%B8%AD%E6%96%87api/akgcdalfjglabfljlcnklbdndmogiebg'" tppabs="https://chrome.google.com/webstore/detail/jquery-19-%E4%B8%AD%E6%96%87api/akgcdalfjglabfljlcnklbdndmogiebg" class="nav-link chrome_app"  target="_blank">下载Chrome App</a></li>
+      <li><a href="javascript:if(confirm('https://chrome.google.com/webstore/detail/jquery-api-%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/akjolgafanmdedmbfkppllnokicficbj  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://chrome.google.com/webstore/detail/jquery-api-%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/akjolgafanmdedmbfkppllnokicficbj'" tppabs="https://chrome.google.com/webstore/detail/jquery-api-%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/akjolgafanmdedmbfkppllnokicficbj" class="nav-link chrome_app"  target="_blank">一键打开插件</a></li>
+      <li><a href="javascript:if(confirm('http://www.css88.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.css88.com/'" tppabs="http://www.css88.com/" class="nav-link">前端开发</a></li>
+    </ul>
+    <input type="search" placeholder="搜索API" autosave="searchdoc" results="10" id="search-field" autocomplete="off">
+  </div>
+
+</div>
+<div id="navigation">
+	
+
+<aside id="categories" class="widget">
+<div id="weibo-con"><p
+                style="font-size:12px; line-height:1.5; margin:8px 0">拍砖纠错 请微博上 <a href="javascript:if(confirm('http://weibo.com/148246293  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://weibo.com/148246293'" tppabs="http://weibo.com/148246293"
+                                                                                   target="_blank">@愚人码头</a>：</p>
+            <iframe style="vertical-align: middle;" width="163" height="24" frameborder="0"
+                    allowtransparency="true" marginwidth="0" marginheight="0" scrolling="no" border="0"
+                    src="../../../widget.weibo.com/relationship/followbutton.php-language=zh_cn&width=63&height=24&uid=1477178352&style=2&btn=red&dpc=1" tppabs="http://widget.weibo.com/relationship/followbutton.php?language=zh_cn&width=63&height=24&uid=1477178352&style=2&btn=red&dpc=1"></iframe>
+        </div><hr/>
+<div id="miaov-con">
+    <a href="javascript:if(confirm('http://v.miaov.com/special/jquery/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://v.miaov.com/special/jquery/'" tppabs="http://v.miaov.com/special/jquery/" target="_blank"><img src="../../../css88.b0.upaiyun.com/css88/2014/09/miaov01.jpg" tppabs="http://css88.b0.upaiyun.com/css88/2014/09/miaov01.jpg" width="230" height="100" alt="" /></a>
+</div>
+<hr/>
+    <ul>
+        <li class="cat-item cat-item-1 current-cat-parent"><a href="../category/ajax/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/ajax/" title="查看Ajax分类下的所有文档">Ajax</a>
+            <ul class="children">
+                <li class="cat-item cat-item-2"><a href="../category/ajax/global-ajax-event-handlers/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/ajax/global-ajax-event-handlers/" title="查看全局Ajax事件处理程序分类下的所有文档">全局Ajax事件处理程序</a>
+                </li>
+                <li class="cat-item cat-item-3"><a href="../category/ajax/helper-functions/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/ajax/helper-functions/" title="查看辅助函数分类下的所有文档">辅助函数</a>
+                </li>
+                <li class="cat-item cat-item-4 current-cat"><a href="../category/ajax/low-level-interface/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/ajax/low-level-interface/" title="查看底层接口分类下的所有文档">底层接口</a></li>
+                <li class="cat-item cat-item-5"><a href="../category/ajax/shorthand-methods/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/ajax/shorthand-methods/" title="查看快捷方法分类下的所有文档">快捷方法</a>
+                </li>
+            </ul>
+        </li>
+        <li class="cat-item cat-item-6"><a href="../category/attributes/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/attributes/" title="查看属性分类下的所有文档">属性</a></li>
+        <li class="cat-item cat-item-7"><a href="../category/callbacks-object/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/callbacks-object/" title="查看回调对象分类下的所有文档">回调对象</a>
+        </li>
+        <li class="cat-item cat-item-8"><a href="../category/core/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/core/" title="查看核心分类下的所有文档">核心</a></li>
+        <li class="cat-item cat-item-9"><a href="../category/css/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/css/" title="查看CSS分类下的所有文档">CSS</a></li>
+        <li class="cat-item cat-item-10"><a href="../category/data/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/data/" title="查看数据分类下的所有文档">数据</a>
+        </li>
+        <li class="cat-item cat-item-11"><a href="../category/deferred-object/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/deferred-object/" title="查看延迟对象分类下的所有文档">延迟对象</a>
+        </li>
+        <li class="cat-item cat-item-87"><a href="../category/deprecated/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/deprecated/" title="查看弃用分类下的所有文档">弃用</a>
+            <ul class="children">
+            	<li class="cat-item cat-item-90"><a href="../category/deprecated/deprecated-1.3/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/deprecated/deprecated-1.3/" title="查看1.3 版本弃用的 API分类下的所有文档">1.3 版本弃用的 API</a>
+            </li>
+            	<li class="cat-item cat-item-88"><a href="../category/deprecated/deprecated-1.7/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/deprecated/deprecated-1.7/" title="查看1.7 版本弃用的 API分类下的所有文档">1.7 版本弃用的 API</a>
+            </li>
+            	<li class="cat-item cat-item-89"><a href="../category/deprecated/deprecated-1.8/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/deprecated/deprecated-1.8/" title="查看1.8 版本弃用的 API分类下的所有文档">1.8 版本弃用的 API</a>
+            </li>
+            	<li class="cat-item cat-item-93"><a href="../category/deprecated/deprecated-1.10/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/deprecated/deprecated-1.10/" title="查看1.10 版本弃用的 API分类下的所有文档">1.10 版本弃用的 API</a>
+            </li>
+            </ul>
+        </li>
+        <li class="cat-item cat-item-12"><a href="../category/dimensions/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/dimensions/" title="查看尺寸分类下的所有文档">尺寸</a>
+        </li>
+        <li class="cat-item cat-item-13"><a href="../category/effects/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/effects/" title="查看效果分类下的所有文档">效果</a>
+            <ul class="children">
+                <li class="cat-item cat-item-14"><a href="../category/effects/basics/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/effects/basics/" title="查看基础分类下的所有文档">基础</a></li>
+                <li class="cat-item cat-item-15"><a href="../category/effects/custom-effects/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/effects/custom-effects/" title="查看自定义分类下的所有文档">自定义</a>
+                </li>
+                <li class="cat-item cat-item-16"><a href="../category/effects/fading/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/effects/fading/" title="查看渐变分类下的所有文档">渐变</a></li>
+                <li class="cat-item cat-item-17"><a href="../category/effects/sliding/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/effects/sliding/" title="查看滑动分类下的所有文档">滑动</a></li>
+            </ul>
+        </li>
+        <li class="cat-item cat-item-18"><a href="../category/events/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/events/" title="查看事件分类下的所有文档">事件</a>
+            <ul class="children">
+                <li class="cat-item cat-item-19"><a href="../category/events/browser-events/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/events/browser-events/" title="查看浏览器事件分类下的所有文档">浏览器事件</a></li>
+                <li class="cat-item cat-item-20"><a href="../category/events/document-loading/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/events/document-loading/" title="查看文档加载分类下的所有文档">文档加载</a></li>
+                <li class="cat-item cat-item-21"><a href="../category/events/event-handler-attachment/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/events/event-handler-attachment/" title="查看事件绑定分类下的所有文档">事件绑定</a></li>
+                <li class="cat-item cat-item-22"><a href="../category/events/event-object/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/events/event-object/" title="查看事件对象分类下的所有文档">事件对象</a></li>
+                <li class="cat-item cat-item-23"><a href="../category/events/form-events/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/events/form-events/" title="查看表单事件分类下的所有文档">表单事件</a></li>
+                <li class="cat-item cat-item-24"><a href="../category/events/keyboard-events/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/events/keyboard-events/" title="查看键盘事件分类下的所有文档">键盘事件</a></li>
+                <li class="cat-item cat-item-25"><a href="../category/events/mouse-events/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/events/mouse-events/" title="查看鼠标事件分类下的所有文档">鼠标事件</a></li>
+            </ul>
+        </li>
+        <li class="cat-item cat-item-26"><a href="../category/forms/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/forms/" title="查看表单分类下的所有文档">表单</a>
+        </li>
+        <li class="cat-item cat-item-27"><a href="../category/internals/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/internals/" title="查看内部函数分类下的所有文档">内部函数</a>
+        </li>
+        <li class="cat-item cat-item-28"><a href="../category/manipulation/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/manipulation/" title="查看操作分类下的所有文档">操作</a>
+            <ul class="children">
+                <li class="cat-item cat-item-29"><a href="../category/manipulation/class-attribute/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/manipulation/class-attribute/" title="查看css类属性分类下的所有文档">Class属性</a>
+                </li>
+                <li class="cat-item cat-item-30"><a
+                        href="../category/manipulation/copying/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/manipulation/copying/" title="查看 复
+                                            制元素 分类下的所有文档">复
+                    制元素</a></li>
+                <li class="cat-item cat-item-32"><a href="../category/manipulation/dom-insertion-around/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/manipulation/dom-insertion-around/" title="查看DOM 插入并包裹现有内容包裹分类下的所有文档">DOM 插入并包裹现有内容</a></li>
+                <li class="cat-item cat-item-33"><a href="../category/manipulation/dom-insertion-inside/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/manipulation/dom-insertion-inside/" title="查看DOM 插入现有元素内分类下的所有文档">DOM 插入现有元素内</a></li>
+                <li class="cat-item cat-item-34"><a href="../category/manipulation/dom-insertion-outside/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/manipulation/dom-insertion-outside/" title="查看DOM 插入现有元素外分类下的所有文档">DOM 插入现有元素外</a></li>
+                <li class="cat-item cat-item-35"><a href="../category/manipulation/dom-removal/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/manipulation/dom-removal/" title="查看DOM 移除分类下的所有文档">DOM 移除</a>
+                </li>
+                <li class="cat-item cat-item-36"><a href="../category/manipulation/dom-replacement/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/manipulation/dom-replacement/" title="查看DOM
+                    替换分类下的所有文档">DOM
+                    替换</a></li>
+                <li class="cat-item cat-item-37"><a href="../category/manipulation/general-attributes/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/manipulation/general-attributes/" title="查看通用属性分类下的所有文档">通用属性</a></li>
+                <li class="cat-item cat-item-38"><a href="../category/manipulation/style-properties/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/manipulation/style-properties/" title="查看Style 属性分类下的所有文档">Style 属性</a></li>
+            </ul>
+        </li>
+        <li class="cat-item cat-item-39"><a href="../category/miscellaneous/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/miscellaneous/" title="查看杂项分类下的所有文档">杂项</a>
+            <ul class="children">
+                <li class="cat-item cat-item-40"><a href="../category/miscellaneous/collection-manipulation/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/miscellaneous/collection-manipulation/" title="查看集合操作分类下的所有文档">集合操作</a></li>
+                <li class="cat-item cat-item-41"><a href="../category/miscellaneous/data-storage/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/miscellaneous/data-storage/" title="查看数据存储分类下的所有文档">数据存储</a>
+                </li>
+                <li class="cat-item cat-item-42"><a href="../category/miscellaneous/dom-element-methods/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/miscellaneous/dom-element-methods/" title="查看DOM 元素方法分类下的所有文档">DOM 元素方法</a></li>
+                <li class="cat-item cat-item-43"><a href="../category/miscellaneous/setup-methods/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/miscellaneous/setup-methods/" title="查看设置方法分类下的所有文档">设置方法</a></li>
+            </ul>
+        </li>
+        <li class="cat-item cat-item-44"><a href="../category/offset/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/offset/" title="查看位置分类下的所有文档">位置</a></li>
+        <li class="cat-item cat-item-45"><a href="../category/properties/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/properties/" title="查看特性分类下的所有文档">特性</a>
+            <ul class="children">
+                <li class="cat-item cat-item-46"><a href="../category/properties/jquery-object-instance-properties/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/properties/jquery-object-instance-properties/" title="查看jQuery
+                    对象实例特性分类下的所有文档">jQuery
+                    对象实例特性</a></li>
+                <li class="cat-item cat-item-47"><a href="../category/properties/global-jquery-object-properties/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/properties/global-jquery-object-properties/" title="查看全局jQuery 对象特性分类下的所有文档">全局jQuery 对象特性</a></li>
+            </ul>
+        </li>
+        <li class="cat-item cat-item-44"><a href="../category/removed/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/removed/" title="查看已删除的所有文档">已删除的</a></li>
+        <li class="cat-item cat-item-48"><a href="../category/selectors/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/selectors/" title="查看选择器分类下的所有文档">选择器</a>
+            <ul class="children">
+                <li class="cat-item cat-item-49"><a href="../category/selectors/attribute-selectors/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/selectors/attribute-selectors/" title="查看属性分类下的所有文档">属性</a>
+                </li>
+                <li class="cat-item cat-item-50"><a href="../category/selectors/basic-css-selectors/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/selectors/basic-css-selectors/" title="查看基础分类下的所有文档">基础</a>
+                </li>
+                <li class="cat-item cat-item-51"><a href="../category/selectors/basic-filter-selectors/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/selectors/basic-filter-selectors/" title="查看基础筛选分类下的所有文档">基础筛选</a></li>
+                <li class="cat-item cat-item-52"><a href="../category/selectors/child-filter-selectors/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/selectors/child-filter-selectors/" title="查看子元素筛选分类下的所有文档">子元素筛选</a></li>
+                <li class="cat-item cat-item-53"><a href="../category/selectors/content-filter-selector/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/selectors/content-filter-selector/" title="查看内容筛选分类下的所有文档">内容筛选</a></li>
+                <li class="cat-item cat-item-54"><a href="../category/selectors/form-selectors/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/selectors/form-selectors/" title="查看表单分类下的所有文档">表单</a></li>
+                <li class="cat-item cat-item-55"><a href="../category/selectors/hierarchy-selectors/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/selectors/hierarchy-selectors/" title="查看层级分类下的所有文档">层级</a></li>
+                <li class="cat-item cat-item-56"><a href="../category/selectors/jquery-selector-extensions/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/selectors/jquery-selector-extensions/" title="查看jQuery
+                    扩展分类下的所有文档">jQuery
+                    扩展</a></li>
+                <li class="cat-item cat-item-57"><a href="../category/selectors/visibility-filter-selectors/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/selectors/visibility-filter-selectors/" title="查看可见性筛选分类下的所有文档">可见性筛选</a></li>
+            </ul>
+        </li>
+        <li class="cat-item cat-item-58"><a href="../category/traversing/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/traversing/" title="查看遍历分类下的所有文档">遍历</a>
+            <ul class="children">
+                <li class="cat-item cat-item-59"><a href="../category/traversing/filtering/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/traversing/filtering/" title="查看筛选分类下的所有文档">筛选</a></li>
+                <li class="cat-item cat-item-60"><a href="../category/traversing/miscellaneous-traversal/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/traversing/miscellaneous-traversal/" title="查看其他遍历分类下的所有文档">其他遍历</a></li>
+                <li class="cat-item cat-item-61"><a href="../category/traversing/tree-traversal/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/traversing/tree-traversal/" title="查看树遍历分类下的所有文档">树遍历</a></li>
+            </ul>
+        </li>
+        <li class="cat-item cat-item-63"><a href="../category/utilities/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/utilities/" title="查看使用工具分类下的所有文档">实用工具</a></li>
+        <li class="cat-item cat-item-64"><a href="../category/version/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/" title="查看版本分类下的所有文档">版本</a>
+            <ul class="children">
+                <li class="cat-item cat-item-65"><a href="../category/version/1.0/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.0/" title="查看版本  1.0分类下的所有文档">版本  1.0</a></li>
+                <li class="cat-item cat-item-66"><a href="../category/version/1.0.4/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.0.4/" title="查看版本  1.0.4分类下的所有文档">版本  1.0.4</a></li>
+                <li class="cat-item cat-item-67"><a href="../category/version/1.1/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.1/" title="查看版本  1.1分类下的所有文档">版本  1.1</a></li>
+                <li class="cat-item cat-item-68"><a href="../category/version/1.1.2/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.1.2/" title="查看版本  1.1.2分类下的所有文档">版本  1.1.2</a></li>
+                <li class="cat-item cat-item-69"><a href="../category/version/1.1.3/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.1.3/" title="查看版本  1.1.3分类下的所有文档">版本  1.1.3</a></li>
+                <li class="cat-item cat-item-70"><a href="../category/version/1.1.4/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.1.4/" title="查看版本  1.1.4分类下的所有文档">版本  1.1.4</a></li>
+                <li class="cat-item cat-item-71"><a href="../category/version/1.2/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.2/" title="查看版本  1.2分类下的所有文档">版本  1.2</a></li>
+                <li class="cat-item cat-item-72"><a href="../category/version/1.2.3/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.2.3/" title="查看版本  1.2.3分类下的所有文档">版本  1.2.3</a></li>
+                <li class="cat-item cat-item-73"><a href="../category/version/1.2.6/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.2.6/" title="查看版本  1.2.6分类下的所有文档">版本  1.2.6</a></li>
+                <li class="cat-item cat-item-74"><a href="../category/version/1.3/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.3/" title="查看版本  1.3分类下的所有文档">版本  1.3</a></li>
+                <li class="cat-item cat-item-75"><a href="../category/version/1.4/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.4/" title="查看版本  1.4分类下的所有文档">版本  1.4</a></li>
+                <li class="cat-item cat-item-76"><a href="../category/version/1.4.1/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.4.1/" title="查看版本  1.4.1分类下的所有文档">版本  1.4.1</a></li>
+                <li class="cat-item cat-item-77"><a href="../category/version/1.4.2/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.4.2/" title="查看版本  1.4.2分类下的所有文档">版本  1.4.2</a></li>
+                <li class="cat-item cat-item-78"><a href="../category/version/1.4.3/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.4.3/" title="查看版本  1.4.3分类下的所有文档">版本  1.4.3</a></li>
+                <li class="cat-item cat-item-79"><a href="../category/version/1.4.4/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.4.4/" title="查看版本
+                    1.4.4分类下的所有文档">版本
+                    1.4.4</a></li>
+                <li class="cat-item cat-item-80"><a href="../category/version/1.5/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.5/" title="查看版本
+                    1.5分类下的所有文档">版本
+                    1.5</a></li>
+                <li class="cat-item cat-item-81"><a href="../category/version/1.5.1/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.5.1/" title="查看版本
+                    1.5.1分类下的所有文档">版本
+                    1.5.1</a></li>
+                <li class="cat-item cat-item-82"><a href="../category/version/1.6/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.6/" title="查看版本
+                    1.6分类下的所有文档">版本
+                    1.6</a></li>
+                <li class="cat-item cat-item-83"><a href="../category/version/1.7/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.7/" title="查看版本  1.7分类下的所有文档">版本  1.7</a></li>
+                <li class="cat-item cat-item-84"><a href="../category/version/1.8/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.8/" title="查看版本 1.8分类下的所有文档">版本 1.8</a></li>
+                <li class="cat-item cat-item-86"><a href="../category/version/1.9/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.9/" title="查看版本  1.9分类下的所有文档">版本  1.9</a></li>
+            </ul>
+        </li>
+        </ul>
+  </aside>
+<hr/>
+<div id="jQuery-api-left" style=" margin-top:10px; margin-left:8px; padding-bottom: 10px">
+          <script type="text/javascript">
+              /*jQuery-api-left*/
+              var cpro_id = "u1730960";
+          </script>
+          <script src="../../../cpro.baidustatic.com/cpro/ui/c.js" tppabs="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+         </div>
+
+
+</div>
+<div id="content_box">
+  <div id="content">
+	
+<div class="inner" role="main">
+<article id="post-109" class="post-109 post type-post status-publish format-standard hentry category-css category-style-properties category-10 category-14 category-19">
+  <header class="entry-header">
+    <h1 class="entry-title">.css()</h1>
+    <hr>
+<div class="jquery-api-top"><a href="javascript:if(confirm('http://www.imooc.com/view/221?from=css88  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.imooc.com/view/221?from=css88'" tppabs="http://www.imooc.com/view/221?from=css88" target="_blank"><img src="../../../css88.b0.upaiyun.com/css88/2014/11/728-90.png" tppabs="http://css88.b0.upaiyun.com/css88/2014/11/728-90.png" width="728" height="90" alt=""/></a></div>
+        <div class="entry-meta">
+      分类: <span class="category"><a href="../category/css/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/css/" title="View all posts in CSS">CSS</a></span><span class="category-divider"> | </span><span class="category"><a href="../category/manipulation/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/manipulation/" title="View all posts in Manipulation">Manipulation</a> &gt; <a href="../category/manipulation/style-properties/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/manipulation/style-properties/" title="View all posts in Style Properties">Style Properties</a></span>   </div><!-- .entry-meta -->
+      </header><!-- .entry-header -->
+
+  <div class="entry-content">
+    获取匹配元素集合中的第一个元素的样式属性的值
+ 或
+ 设置每个匹配元素的一个或多个CSS属性。<div class="toc">
+<h4><span>Contents:</span></h4>
+<ul class="toc-list">
+<li>
+<a href="#css1">.css( propertyName )</a><ul>
+<li>.css( propertyName )</li>
+<li>.css( propertyNames )</li>
+</ul>
+</li>
+<li>
+<a href="#css2">.css( propertyName, value )</a><ul>
+<li>.css( propertyName, value )</li>
+<li>.css( propertyName, function(index, value) )</li>
+<li>.css( properties )</li>
+</ul>
+</li>
+</ul>
+</div><article id="css1" class="entry method"><h2 class="section-title">
+<span class="name">.css( propertyName )</span><span class="returns">返回: <a href="../Types/index.htm#String" tppabs="http://www.css88.com/jqapi-1.9/Types#String">String</a></span>
+</h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>描述: </strong>获取匹配元素集合中的第一个元素的样式属性的值</p>
+<ul class="signatures">
+<li class="signature" id="css-propertyName">
+<h4 class="name">
+<span class="version-details">添加的版本: <a href="../category/version/1.0/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.0/">1.0</a></span>.css( propertyName )</h4>
+<ul><li>
+<div><strong>propertyName</strong></div>
+<div>类型: <a href="../Types/index.htm#String" tppabs="http://www.css88.com/jqapi-1.9/Types#String">String</a>
+</div>
+<div>一个css属性名。</div>
+</li></ul>
+</li>
+<li class="signature" id="css-propertyNames">
+<h4 class="name">
+<span class="version-details">添加的版本: <a href="../category/version/1.9/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.9/">1.9</a></span>.css( propertyNames )</h4>
+<ul><li>
+<div><strong>propertyNames</strong></div>
+<div>类型: <a href="../Types/index.htm#Array" tppabs="http://www.css88.com/jqapi-1.9/Types#Array">Array</a>
+</div>
+<div>一个或多个CSS属性组成的一个数组</div>
+</li></ul>
+</li>
+</ul>
+<div class="longdesc" id="entry-longdesc">
+      
+
+      <p><code>.css()</code>方法可以非常方便地获取匹配的元素集合中第一个元素的样式属性值，
+
+      对于某些属性而言，浏览器访问样式属性的方式是不同的，该方法对于取得这些属性是非常方便的(例如，
+      某些属性在标准浏览器下是通过的 <code>getComputedStyle()</code> 方法取得的，而在Internet Explorer下是通过<code>currentStyle</code> 和 <code>runtimeStyle</code>属性取得的)并且，某些特定的属性，不同浏览器的写法不一。举个例子， Internet Explorer的DOM 将<code>float</code> 属性写成 <code>styleFloat</code>实现，W3C标准浏览器将<code>float</code> 属性写成<code>cssFloat</code>。 为了保持一致性，您可以简单地使用<code>"float"</code>，jQuery将为每个浏览器返回它需要的正确值。</p>
+
+      <p>另外,jQuery同样可以解析 CSS 和 用multiple-word格式化（用横杠连接的词，比如：background-color）的DOM属性的不同写法。举个例子：jQery能解析<code>.css('background-color')</code> 和 <code>.css('backgroundColor')</code>并且返回正确的值。不同的浏览器可能会返回CSS颜色值在逻辑上相同，但在文字上表现不同，例如： #FFF, #ffffff, 和 rgb(255,255,255)。</p>
+      <p>简写速写的CSS属性(例如： margin, background, border) 是不支持的，例如，如果你想重新获取margin，可以使用<code>$(elem).css('marginTop')</code> 和 <code>$(elem).css('marginRight')</code>，其他的也是如此。</p>
+      <p><strong>从jQuery 1.9开始</strong>, 传递一个CSS的样式属性的数组给<code>.css()</code>将返回 属性 - 值 配对的对象。例如，要获取元素4个边距宽度值<code>border-width</code>，你可以使用<code>$( elem ).css([ "borderTopWidth", "borderRightWidth", "borderBottomWidth", "borderLeftWidth" ])</code>.</p>
+
+    </div>
+<div class="jquery-api-top"><script type="text/javascript">
+    /*jQuery API banner*/
+    var cpro_id = "u1730954";
+</script>
+<script src="../../../cpro.baidustatic.com/cpro/ui/c.js" tppabs="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script></div>
+
+<section class="entry-examples" id="entry-examples"><header><h2 class="underline">例子:</h2></header><div class="entry-example" id="example-0">
+<h4>Example: <span class="desc">点击div，得到它的背景颜色</span>
+</h4>
+<div class="syntaxhighlighter xml ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+            <div class="line n4">4</div>
+          
+            <div class="line n5">5</div>
+          
+            <div class="line n6">6</div>
+          
+            <div class="line n7">7</div>
+          
+            <div class="line n8">8</div>
+          
+            <div class="line n9">9</div>
+          
+            <div class="line n10">10</div>
+          
+            <div class="line n11">11</div>
+          
+            <div class="line n12">12</div>
+          
+            <div class="line n13">13</div>
+          
+            <div class="line n14">14</div>
+          
+            <div class="line n15">15</div>
+          
+            <div class="line n16">16</div>
+          
+            <div class="line n17">17</div>
+          
+            <div class="line n18">18</div>
+          
+            <div class="line n19">19</div>
+          
+            <div class="line n20">20</div>
+          
+            <div class="line n21">21</div>
+          
+            <div class="line n22">22</div>
+          
+            <div class="line n23">23</div>
+          
+            <div class="line n24">24</div>
+          
+            <div class="line n25">25</div>
+          
+            <div class="line n26">26</div>
+          
+            <div class="line n27">27</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="doctype">&lt;!DOCTYPE html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code><span class="tag">div</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">60</span>px;</span></span> <span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">60</span>px;</span></span> <span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">5</span>px;</span></span> <span class="rule"><span class="attribute">float</span>:<span class="value">left;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">span</span> <span class="attribute">id</span>=<span class="value">"result"</span>&gt;</span>&amp;nbsp;<span class="tag">&lt;/<span class="title">span</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"background-color:blue;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"background-color:rgb(15,99,30);"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"background-color:#123456;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"background-color:#f11;"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span></code></div></div><div class="container"><div class="line"><code>$(<span class="string">"div"</span>).click(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span></code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> color = $(<span class="keyword">this</span>).css(<span class="string">"background-color"</span>);</code></div></div><div class="container"><div class="line"><code>  $(<span class="string">"#result"</span>).html(<span class="string">"That div is &lt;span style='color:"</span> +</code></div></div><div class="container"><div class="line"><code>                     color + <span class="string">";'&gt;"</span> + color + <span class="string">"&lt;/span&gt;."</span>);</code></div></div><div class="container"><div class="line"><code>});</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div>
+<div class="entry-example" id="example-1">
+<h4>Example: <span class="desc">点击div，得到宽度，高度，文本颜色，背景颜色。</span>
+</h4>
+<div class="syntaxhighlighter xml ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+            <div class="line n4">4</div>
+          
+            <div class="line n5">5</div>
+          
+            <div class="line n6">6</div>
+          
+            <div class="line n7">7</div>
+          
+            <div class="line n8">8</div>
+          
+            <div class="line n9">9</div>
+          
+            <div class="line n10">10</div>
+          
+            <div class="line n11">11</div>
+          
+            <div class="line n12">12</div>
+          
+            <div class="line n13">13</div>
+          
+            <div class="line n14">14</div>
+          
+            <div class="line n15">15</div>
+          
+            <div class="line n16">16</div>
+          
+            <div class="line n17">17</div>
+          
+            <div class="line n18">18</div>
+          
+            <div class="line n19">19</div>
+          
+            <div class="line n20">20</div>
+          
+            <div class="line n21">21</div>
+          
+            <div class="line n22">22</div>
+          
+            <div class="line n23">23</div>
+          
+            <div class="line n24">24</div>
+          
+            <div class="line n25">25</div>
+          
+            <div class="line n26">26</div>
+          
+            <div class="line n27">27</div>
+          
+            <div class="line n28">28</div>
+          
+            <div class="line n29">29</div>
+          
+            <div class="line n30">30</div>
+          
+            <div class="line n31">31</div>
+          
+            <div class="line n32">32</div>
+          
+            <div class="line n33">33</div>
+          
+            <div class="line n34">34</div>
+          
+            <div class="line n35">35</div>
+          
+            <div class="line n36">36</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="doctype">&lt;!DOCTYPE html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code><span class="tag">div</span> <span class="rules">{ <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">50</span>px;</span></span> <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">5</span>px;</span></span> <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">5</span>px;</span></span> <span class="rule"><span class="attribute">float</span>:<span class="value"> left;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="id">#box1</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">50</span>px;</span></span> <span class="rule"><span class="attribute">color</span>:<span class="value"> yellow;</span></span> <span class="rule"><span class="attribute">background-color</span>:<span class="value"> blue;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code><span class="id">#box2</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">80</span>px;</span></span> <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="function">rgb(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>)</span>;</span></span> <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="function">rgb(<span class="number">15</span>,<span class="number">99</span>,<span class="number">30</span>)</span>;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code><span class="id">#box3</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">40</span>px;</span></span> <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#fcc</span>;</span></span> <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#123456</span>;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code><span class="id">#box4</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">70</span>px;</span></span> <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#f11</span>;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">p</span> <span class="attribute">id</span>=<span class="value">"result"</span>&gt;</span>&amp;nbsp;<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"box1"</span>&gt;</span>1<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"box2"</span>&gt;</span>2<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"box3"</span>&gt;</span>3<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"box4"</span>&gt;</span>4<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span></code></div></div><div class="container"><div class="line"><code>$(<span class="string">"div"</span>).click(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span></code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> html = [<span class="string">"The clicked div has the following styles:"</span>];</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> styleProps = $(<span class="keyword">this</span>).css( [<span class="string">"width"</span>, <span class="string">"height"</span>, <span class="string">"color"</span>, <span class="string">"background-color"</span>] );</code></div></div><div class="container"><div class="line"><code>  $.each( styleProps, <span class="keyword">function</span>( prop, value ) {</code></div></div><div class="container"><div class="line"><code>    html.push( prop + <span class="string">": "</span> + value );</code></div></div><div class="container"><div class="line"><code>  });</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  $( <span class="string">"#result"</span> ).html( html.join( <span class="string">"&lt;br&gt;"</span> ) );</code></div></div><div class="container"><div class="line"><code>});</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div></section>
+</div></article><article id="css2" class="entry method"><h2 class="section-title">
+<span class="name">.css( propertyName, value )</span><span class="returns">返回: <a href="../Types/index.htm#jQuery" tppabs="http://www.css88.com/jqapi-1.9/Types#jQuery">jQuery</a></span>
+</h2>
+<div class="entry-wrapper">
+<p class="desc"><strong>描述: </strong>设置每个匹配元素的一个或多个CSS属性。</p>
+<ul class="signatures">
+<li class="signature" id="css-propertyName-value">
+<h4 class="name">
+<span class="version-details">添加的版本: <a href="../category/version/1.0/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.0/">1.0</a></span>.css( propertyName, value )</h4>
+<ul>
+<li>
+<div><strong>propertyName</strong></div>
+<div>类型: <a href="../Types/index.htm#String" tppabs="http://www.css88.com/jqapi-1.9/Types#String">String</a>
+</div>
+<div>一个CSS属性名</div>
+</li>
+<li>
+<div><strong>value</strong></div>
+<div>类型: <a href="../Types/index.htm#String,%20Number" tppabs="http://www.css88.com/jqapi-1.9/Types#String,%20Number">String, Number</a>
+</div>
+<div>设置这个CSS属性的值</div>
+</li>
+</ul>
+</li>
+<li class="signature" id="css-propertyName-functionindex--value">
+<h4 class="name">
+<span class="version-details">添加的版本: <a href="../category/version/1.4/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.4/">1.4</a></span>.css( propertyName, function(index, value) )</h4>
+<ul>
+<li>
+<div><strong>propertyName</strong></div>
+<div>类型: <a href="../Types/index.htm#String" tppabs="http://www.css88.com/jqapi-1.9/Types#String">String</a>
+</div>
+<div>一个CSS属性名</div>
+</li>
+<li>
+<div><strong>function(index, value)</strong></div>
+<div>类型: <a href="../Types/index.htm#Function" tppabs="http://www.css88.com/jqapi-1.9/Types#Function">Function</a>()</div>
+<div>一个返回设置值的函数。<code>this</code> 是当前元素。接收index 参数表示元素在匹配集合中的索引位置和html 参数表示元素上原来的 HTML 内容。</div>
+</li>
+</ul>
+</li>
+<li class="signature" id="css-properties">
+<h4 class="name">
+<span class="version-details">添加的版本: <a href="../category/version/1.0/index.htm" tppabs="http://www.css88.com/jqapi-1.9/category/version/1.0/">1.0</a></span>.css( properties )</h4>
+<ul><li>
+<div><strong>properties</strong></div>
+<div>类型: <a href="../Types/index.htm#PlainObject" tppabs="http://www.css88.com/jqapi-1.9/Types#PlainObject">PlainObject</a>
+</div>
+<div>一个 属性-值 配对的对象</div>
+</li></ul>
+</li>
+</ul>
+<div class="longdesc" id="entry-longdesc-1">
+      <p>和<code>.prop()</code>方法一样，<code>.css()</code>方法使得设置元素的CSS属性快速而又简单。这个方法可以使用任何一个CSS属性名和用空格隔开的值，或者一个“键/值”对对象(JavaScript 对象符号)作为参数。 </p>
+
+      <p>另外,jQuery可以同样解析CSS和用multiple-word（用横杠连接的词，比如：background-color）属性的DOM格式。举个例子：jquery能解析<code>.css({'background-color': '#ffe', 'border-left': '5px solid #ccc'})</code> 和 <code>.css({backgroundColor: '#ffe', borderLeft: '5px solid #ccc'})</code>并且返回正确的值（注意这两条语句的单引号和“-”）。在 DOM 标记法中，属性名可以不使用引号包裹，但是在 CSS 标记法中，如果属性中含有连字符(-)的话，则必须用引号包裹。。</p>
+
+      <p>
+        当<code>.css()</code> 作为一个设置函数使用的时候，jQuery修改元素的<code>style</code>（样式）属性。例如，<code>$('#mydiv').css('color', 'green')</code> 等价于 <code>document.getElementById('mydiv').style.color = 'green'</code>。样式属性的值设置为空字符串 - 例如，<code>$('#mydiv').css('color', '')</code> - 那么会从元素上移除该属性（若该属性存在的话），该属性之前可能是通过 jQuery 的 <code>.css()</code> 方法设置的 HTML style 属性，也有可能是通过直接对 <code>style</code> 属性进行 DOM 操作而被设置的。它不会移除通过 CSS 规则或 <code>&lt;style&gt;</code> 元素设置的属性。
+         <strong>警告：</strong>一个值得注意的例外情况是，IE 8及以下版本，删除的简写属性，如边<code>border</code> 或者 <code>background</code> 将完全的删除该元素样式，不管是在样式表或<code>&lt;style&gt;</code>元素中。</p>
+
+      <p>
+        从jQuery1.6开始，<code>.css()</code>接受类似于<code>.animate()</code>的相对值。相对值时以<code>+=</code> 或者 <code>-=</code>开头的字符串，表示递增或递减当前的值。 例如，如果一个元素的左边填充（padding-left）是10px的，<code>.css( "padding-left", "+=15" )</code>将返回总的左填充（padding-left ）为25px。</p>
+      <p>从 jQuery 1.4开始, <code>.css()</code> 让我们传递一个函数给属性值：</p>
+      <div class="syntaxhighlighter javascript nogutter">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code>$(<span class="string">'div.example'</span>).css(<span class="string">'width'</span>, <span class="keyword">function</span>(index) {</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">return</span> index * <span class="number">50</span>;</code></div></div><div class="container"><div class="line"><code>});</code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+      <p>这个例子设置一个匹配元素的宽度增加到较大的值。</p>
+      <p><strong>注意: </strong>如果设置函数没有返回任何东西(例如. <code>function(index, style){})</code>，或者如果返回<code>undefined</code>，当前的值不会改变。只有当某些条件得到满足，选择性的设定值的时后是有用的。</p>
+    </div>
+<div class="jquery-api-top"><script type="text/javascript">
+    /*jQuery API banner*/
+    var cpro_id = "u1730954";
+</script>
+<script src="../../../cpro.baidustatic.com/cpro/ui/c.js" tppabs="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script></div>
+
+<section class="entry-examples" id="entry-examples-1"><header><h2 class="underline">例子:</h2></header><div class="entry-example" id="example-1-0">
+<h4>Example: <span class="desc">通过mouseover事件改变一些段落的颜色为红色。</span>
+</h4>
+<div class="syntaxhighlighter xml ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+            <div class="line n4">4</div>
+          
+            <div class="line n5">5</div>
+          
+            <div class="line n6">6</div>
+          
+            <div class="line n7">7</div>
+          
+            <div class="line n8">8</div>
+          
+            <div class="line n9">9</div>
+          
+            <div class="line n10">10</div>
+          
+            <div class="line n11">11</div>
+          
+            <div class="line n12">12</div>
+          
+            <div class="line n13">13</div>
+          
+            <div class="line n14">14</div>
+          
+            <div class="line n15">15</div>
+          
+            <div class="line n16">16</div>
+          
+            <div class="line n17">17</div>
+          
+            <div class="line n18">18</div>
+          
+            <div class="line n19">19</div>
+          
+            <div class="line n20">20</div>
+          
+            <div class="line n21">21</div>
+          
+            <div class="line n22">22</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="doctype">&lt;!DOCTYPE html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">p</span> <span class="rules">{ <span class="rule"><span class="attribute">color</span>:<span class="value">blue;</span></span> <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">200</span>px;</span></span> <span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">14</span>px;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span>&gt;</span>Just roll the mouse over me.<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span>&gt;</span>Or me to see a color change.<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span></code></div></div><div class="container"><div class="line"><code>  $(<span class="string">"p"</span>).mouseover(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span></code></div></div><div class="container"><div class="line"><code>    $(<span class="keyword">this</span>).css(<span class="string">"color"</span>,<span class="string">"red"</span>);</code></div></div><div class="container"><div class="line"><code>  });</code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div>
+<div class="entry-example" id="example-1-1">
+<h4>Example: <span class="desc">增加#box 的宽度为200像素</span>
+</h4>
+<div class="syntaxhighlighter xml ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+            <div class="line n4">4</div>
+          
+            <div class="line n5">5</div>
+          
+            <div class="line n6">6</div>
+          
+            <div class="line n7">7</div>
+          
+            <div class="line n8">8</div>
+          
+            <div class="line n9">9</div>
+          
+            <div class="line n10">10</div>
+          
+            <div class="line n11">11</div>
+          
+            <div class="line n12">12</div>
+          
+            <div class="line n13">13</div>
+          
+            <div class="line n14">14</div>
+          
+            <div class="line n15">15</div>
+          
+            <div class="line n16">16</div>
+          
+            <div class="line n17">17</div>
+          
+            <div class="line n18">18</div>
+          
+            <div class="line n19">19</div>
+          
+            <div class="line n20">20</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="doctype">&lt;!DOCTYPE html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code>  <span class="id">#box</span> <span class="rules">{ <span class="rule"><span class="attribute">background</span>:<span class="value"> black;</span></span> <span class="rule"><span class="attribute">color</span>:<span class="value"> snow;</span></span> <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">100</span>px;</span></span> <span class="rule"><span class="attribute">padding</span>:<span class="value"><span class="number">10</span>px;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"box"</span>&gt;</span>Click me to grow<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span></code></div></div><div class="container"><div class="line"><code>  $(<span class="string">"#box"</span>).one( <span class="string">"click"</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span></code></div></div><div class="container"><div class="line"><code>    $( <span class="keyword">this</span> ).css( <span class="string">"width"</span>,<span class="string">"+=200"</span> );</code></div></div><div class="container"><div class="line"><code>  });</code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div>
+<div class="entry-example" id="example-1-2">
+<h4>Example: <span class="desc">突出段落中点击文本。</span>
+</h4>
+<div class="syntaxhighlighter xml ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+            <div class="line n4">4</div>
+          
+            <div class="line n5">5</div>
+          
+            <div class="line n6">6</div>
+          
+            <div class="line n7">7</div>
+          
+            <div class="line n8">8</div>
+          
+            <div class="line n9">9</div>
+          
+            <div class="line n10">10</div>
+          
+            <div class="line n11">11</div>
+          
+            <div class="line n12">12</div>
+          
+            <div class="line n13">13</div>
+          
+            <div class="line n14">14</div>
+          
+            <div class="line n15">15</div>
+          
+            <div class="line n16">16</div>
+          
+            <div class="line n17">17</div>
+          
+            <div class="line n18">18</div>
+          
+            <div class="line n19">19</div>
+          
+            <div class="line n20">20</div>
+          
+            <div class="line n21">21</div>
+          
+            <div class="line n22">22</div>
+          
+            <div class="line n23">23</div>
+          
+            <div class="line n24">24</div>
+          
+            <div class="line n25">25</div>
+          
+            <div class="line n26">26</div>
+          
+            <div class="line n27">27</div>
+          
+            <div class="line n28">28</div>
+          
+            <div class="line n29">29</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="doctype">&lt;!DOCTYPE html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">p</span> <span class="rules">{ <span class="rule"><span class="attribute">color</span>:<span class="value">blue;</span></span> <span class="rule"><span class="attribute">font-weight</span>:<span class="value">bold;</span></span> <span class="rule"><span class="attribute">cursor</span>:<span class="value">pointer;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  Once upon a time there was a man</code></div></div><div class="container"><div class="line"><code>  who lived in a pizza parlor. This</code></div></div><div class="container"><div class="line"><code>  man just loved pizza and ate it all</code></div></div><div class="container"><div class="line"><code>  the time.  He went on to be the</code></div></div><div class="container"><div class="line"><code>  happiest man in the world.  The end.</code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span></code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> words = $(<span class="string">"p:first"</span>).text().split(<span class="string">" "</span>);</code></div></div><div class="container"><div class="line"><code>  <span class="keyword">var</span> text = words.join(<span class="string">"&lt;/span&gt; &lt;span&gt;"</span>);</code></div></div><div class="container"><div class="line"><code>  $(<span class="string">"p:first"</span>).html(<span class="string">"&lt;span&gt;"</span> + text + <span class="string">"&lt;/span&gt;"</span>);</code></div></div><div class="container"><div class="line"><code>  $(<span class="string">"span"</span>).click(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span></code></div></div><div class="container"><div class="line"><code>    $(<span class="keyword">this</span>).css(<span class="string">"background-color"</span>,<span class="string">"yellow"</span>);</code></div></div><div class="container"><div class="line"><code>  });</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div>
+<div class="entry-example" id="example-1-3">
+<h4>Example: <span class="desc">设置所有段落的文本颜色为红色背景为蓝色：</span>
+</h4>
+<div class="syntaxhighlighter xml ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+            <div class="line n4">4</div>
+          
+            <div class="line n5">5</div>
+          
+            <div class="line n6">6</div>
+          
+            <div class="line n7">7</div>
+          
+            <div class="line n8">8</div>
+          
+            <div class="line n9">9</div>
+          
+            <div class="line n10">10</div>
+          
+            <div class="line n11">11</div>
+          
+            <div class="line n12">12</div>
+          
+            <div class="line n13">13</div>
+          
+            <div class="line n14">14</div>
+          
+            <div class="line n15">15</div>
+          
+            <div class="line n16">16</div>
+          
+            <div class="line n17">17</div>
+          
+            <div class="line n18">18</div>
+          
+            <div class="line n19">19</div>
+          
+            <div class="line n20">20</div>
+          
+            <div class="line n21">21</div>
+          
+            <div class="line n22">22</div>
+          
+            <div class="line n23">23</div>
+          
+            <div class="line n24">24</div>
+          
+            <div class="line n25">25</div>
+          
+            <div class="line n26">26</div>
+          
+            <div class="line n27">27</div>
+          
+            <div class="line n28">28</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="doctype">&lt;!DOCTYPE html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">p</span> <span class="rules">{ <span class="rule"><span class="attribute">color</span>:<span class="value">green;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span>&gt;</span>Move the mouse over a paragraph.<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">p</span>&gt;</span>Like this one or the one above.<span class="tag">&lt;/<span class="title">p</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span></code></div></div><div class="container"><div class="line"><code>  $(<span class="string">"p"</span>).hover(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span></code></div></div><div class="container"><div class="line"><code>    $(<span class="keyword">this</span>).css({<span class="string">'background-color'</span> : <span class="string">'yellow'</span>, <span class="string">'font-weight'</span> : <span class="string">'bolder'</span>});</code></div></div><div class="container"><div class="line"><code>  }, <span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span></code></div></div><div class="container"><div class="line"><code>    <span class="keyword">var</span> cssObj = {</code></div></div><div class="container"><div class="line"><code>      <span class="string">'background-color'</span> : <span class="string">'#ddd'</span>,</code></div></div><div class="container"><div class="line"><code>      <span class="string">'font-weight'</span> : <span class="string">''</span>,</code></div></div><div class="container"><div class="line"><code>      <span class="string">'color'</span> : <span class="string">'rgb(0,40,244)'</span></code></div></div><div class="container"><div class="line"><code>    };</code></div></div><div class="container"><div class="line"><code>    $(<span class="keyword">this</span>).css(cssObj);</code></div></div><div class="container"><div class="line"><code>  });</code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div>
+<div class="entry-example" id="example-1-4">
+<h4>Example: <span class="desc">当你点击一个div的时候递增他的尺寸</span>
+</h4>
+<div class="syntaxhighlighter xml ">
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          
+            <div class="line n1">1</div>
+          
+            <div class="line n2">2</div>
+          
+            <div class="line n3">3</div>
+          
+            <div class="line n4">4</div>
+          
+            <div class="line n5">5</div>
+          
+            <div class="line n6">6</div>
+          
+            <div class="line n7">7</div>
+          
+            <div class="line n8">8</div>
+          
+            <div class="line n9">9</div>
+          
+            <div class="line n10">10</div>
+          
+            <div class="line n11">11</div>
+          
+            <div class="line n12">12</div>
+          
+            <div class="line n13">13</div>
+          
+            <div class="line n14">14</div>
+          
+            <div class="line n15">15</div>
+          
+            <div class="line n16">16</div>
+          
+            <div class="line n17">17</div>
+          
+            <div class="line n18">18</div>
+          
+            <div class="line n19">19</div>
+          
+            <div class="line n20">20</div>
+          
+            <div class="line n21">21</div>
+          
+            <div class="line n22">22</div>
+          
+            <div class="line n23">23</div>
+          
+            <div class="line n24">24</div>
+          
+            <div class="line n25">25</div>
+          
+            <div class="line n26">26</div>
+          
+            <div class="line n27">27</div>
+          
+            <div class="line n28">28</div>
+          
+            <div class="line n29">29</div>
+          
+        </td>
+        <td class="code">
+          <pre><div class="container"><div class="line"><code><span class="doctype">&lt;!DOCTYPE html&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">html</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">div</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">20</span>px;</span></span> <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">15</span>px;</span></span> <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#f33</span>;</span></span> <span class="rule">}</span></span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;/<span class="title">style</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://code.jquery.com/jquery-latest.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">head</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">div</span>&gt;</span>click<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code>  <span class="tag">&lt;<span class="title">div</span>&gt;</span>click<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span></code></div></div><div class="container"><div class="line"><code>  $(<span class="string">"div"</span>).click(<span class="keyword">function</span>() {</code></div></div><div class="container"><div class="line"><code>    $(<span class="keyword">this</span>).css({</code></div></div><div class="container"><div class="line"><code>      width: <span class="keyword">function</span>(index, value) {</code></div></div><div class="container"><div class="line"><code>        <span class="keyword">return</span> parseFloat(value) * <span class="number">1.2</span>;</code></div></div><div class="container"><div class="line"><code>      },</code></div></div><div class="container"><div class="line"><code>      height: <span class="keyword">function</span>(index, value) {</code></div></div><div class="container"><div class="line"><code>        <span class="keyword">return</span> parseFloat(value) * <span class="number">1.2</span>;</code></div></div><div class="container"><div class="line"><code>      }</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code>    });</code></div></div><div class="container"><div class="line"><code>  });</code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">script</span>&gt;</span></code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">body</span>&gt;</span></code></div></div><div class="container"><div class="line"><code><span class="tag">&lt;/<span class="title">html</span>&gt;</span></code></div></div></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4>Demo:</h4>
+<div class="demo code-demo"></div>
+</div></section>
+</div></article>  </div><!-- .entry-content -->
+
+</article>        
+</div>
+
+
+  </div>
+</div>
+<script type="text/javascript" src="../js/search.js" tppabs="http://www.css88.com/jqapi-1.9/js/search.js"></script>
+<script type="text/javascript" src="../js/gotop.min.js" tppabs="http://www.css88.com/jqapi-1.9/js/gotop.min.js"></script>
+<script type="text/javascript">
+	goToTop.init();
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3448069-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www/') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
