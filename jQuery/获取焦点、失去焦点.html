@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .active{
+            background: rgb(16, 233, 106);  
+            border: 2px solid rgb(233, 131, 16);
+        }
+    </style>
+</head>
+<body>
+    
+    <h3>个人信息注册表</h3>
+    <div>姓名：
+        <input type="text" value="请输入姓名" id="name" class="xx"> 
+    </div>
+    <div>年龄：
+        <input type="text" value="请输入年龄" id="age" class="xx"> 
+    </div>
+    
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $("#name").on("focus",function(){
+            if(this.value == this.defaultValue){
+                this.value = "";
+            }
+            $(this).addClass("active");
+        });
+        $("#name").on("blur",function(){
+            if(this.value == ""){
+                this.value = this.defaultValue;
+            }
+            $(this).removeClass("active");
+        });
+        $("#age").on("focus",function(){
+            if(this.value == this.defaultValue){
+                this.value = "";
+            }
+            $(this).addClass("active");
+        });
+        $("#age").on("blur",function(){
+            if(this.value == ""){
+                this.value = this.defaultValue;
+            }
+            $(this).removeClass("active");
+        });
+
+       
+    </script>
+</body>
+</html>

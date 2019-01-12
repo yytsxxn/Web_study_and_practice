@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    
     <div>你最喜欢的运动是？</div>
     <input type="checkbox" class="ball">football
     <input type="checkbox" class="ball">baseball
@@ -17,7 +18,9 @@
         <button id="none">全不选</button>
         <button id="invert">反选</button>
     </div>
+
     <script src="jquery-1.12.4.js"></script>
+
     <script>
         $("#all").on("click",function(){
             $(":checkbox").prop("checked",true);
@@ -32,6 +35,5 @@
         })
     </script>
 
-    
 </body>
 </html>
