@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        div.content{
+            float: left;
+            text-align: center;
+            margin: 10px;
+            
+        }
+        #left,#right{
+            height:300px;
+            width:150px;           
+            border:4px solid royalblue;
+            font-size: 20px;
+        }
+        span {
+            display: block;
+            margin: 2px 2px;
+            padding: 4px 2px;
+            background: #898989;
+            cursor: pointer;
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="content" >
+        <select multiple="multiple" id="left">
+            <option value="1">选项一</option>
+            <option value="2">选项二</option>
+            <option value="3">选项三</option>
+            <option value="4">选项四</option>
+            <option value="5">选项五</option>
+            <option value="6">选项六</option>
+            <option value="7">选项七</option>
+        </select>
+        <div>
+            <span id="add">选中添加到右边&gt;&gt;</span>
+            <span id="all">全部添加到右边&gt;&gt;</span>
+        </div>
+    </div>
+    
+    <div class="content">
+        <select multiple="multiple" id="right">
+            <option value="8">选项八</option>
+        </select>
+        <div>
+            <span id="delete">&lt;&lt;选中删除到左边</span>
+            <span id="none">&lt;&lt;全部删除到左边 </span>
+        </div>
+    </div>    
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        // 添加
+        $("#add").on("click",function(){
+            $("#left option:selected").appendTo("#right");
+            $("#right option").prop("selected",false);
+        })
+        $("#all").on("click",function(){
+            $("#left option").appendTo("#right");
+        })
+        //双击某个选项进行添加
+        $("#left").on("dblclick",function(){
+            $("#left option:selected").appendTo("#right");
+            $("#right option").prop("selected",false);
+        })
+        //删除
+        $("#delete").on("click",function(){
+            $("#right option:selected").appendTo("#left");
+            $("#left option").prop("selected",false);
+        })
+        $("#none").on("click",function(){
+            $("#right option").appendTo("#left");
+        })
+    
+    </script>
+</body>
+</html>
