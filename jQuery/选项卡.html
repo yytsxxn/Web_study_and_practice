@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #btn{
+            width:300px;
+            height:40px;
+            position: absolute;
+            top:63px;
+            left:150px;
+        }
+        #btn li{
+            list-style: none;
+            padding:0 20px;
+            float:left;
+            border:2px solid royalblue;
+            cursor: pointer;
+        }
+        ul .selected{
+            background: rgb(116, 110, 110,0.5);
+        }
+        #content{
+            width:400px;
+            height:300px;
+            border:4px solid royalblue;
+            position:absolute;
+            top:100px;
+            left:150px;
+            
+        }
+        #content div{
+            display:none;
+        }
+        #content .active{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <ul id="btn">
+        <li id="a" class="selected">时事</li>
+        <li id="b">体育</li>
+        <li id="c">娱乐</li>
+    </ul>
+    <div id="content">
+        <div id="1" class="active">时事</div>
+        <div id="2">体育</div>
+        <div id="3">娱乐</div>
+    </div>
+
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $('#btn li').on('click',function(){
+            $(this).addClass('selected').siblings().removeClass('selected');
+            $('#content div').eq( $(this).index() ).addClass('active').siblings().removeClass('active');
+        })
+    </script>
+</body>
+</html>
