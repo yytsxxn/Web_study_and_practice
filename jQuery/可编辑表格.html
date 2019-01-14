@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table{
+            height:300px;
+            width:600px;
+            border-collapse:collapse;
+        }
+        table th,td{
+            height:50px;
+            width:300px;
+            border:1px solid black;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <table>
+        <tr><th colspan="2">鼠标点击表格就可以编辑姓名</th></tr>
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+        </tr>
+        <tr>
+            <td>1234</td>
+            <td class="edit">张三</td>
+        </tr>
+        <tr>
+            <td>1235</td>
+            <td class="edit">李四</td>
+        </tr>
+        <tr>
+            <td>1236</td>
+            <td class="edit">王五</td>
+        </tr>
+        <tr>
+            <td>1237</td>
+            <td class="edit">赵六</td>
+        </tr>
+    </table>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(".edit").on("click",function(){
+            if( $(this).find("input").size() <= 0){
+                var $val = $(this).html();
+                $(this).html("<input class='txt' value = '" + $val + "'></input");
+                $(this).children().trigger("select");
+            }
+            // if( $(this).find('input').size() <=0 ){
+            //     var $val = $(this).html();
+            //     $(this).html('<input class="txt" value="'+ $val +'"></input>');
+            //     $(this).children().trigger('select');
+            // }
+        })
+        $(".edit").on("keyup","input",function(e){
+            if(e.which == 13){
+                var val = $(this).val();
+                $(this).parent().html(val);
+            }
+        })
+    </script>
+    
+</body>
+</html>
