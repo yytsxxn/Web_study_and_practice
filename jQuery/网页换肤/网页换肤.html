@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        #content{
+            width:500px;
+            height:500px;
+            margin:40px auto;
+        }
+        ul{
+            overflow: hidden;
+            cursor: pointer;
+        }
+        li{
+            list-style: none;
+            width:15px;
+            height:15px;
+            float:left;
+            margin-right: 5px;
+            background-image: url(theme.gif);
+            background-repeat: no-repeat;
+        }
+        li:nth-child(2){
+            background-position: -100px 0;
+        }
+        li:nth-child(3){
+            background-position: -80px 0;
+        }
+        li:nth-child(4){
+            background-position: -60px 0;
+        }
+        li:nth-child(5){
+            background-position: -40px 0;
+        }
+        li:nth-child(6){
+            background-position: -20px 0;
+        }
+        li:nth-child(1).active{
+            background-position: 0 -15px;
+        }
+        li:nth-child(2).active{
+            background-position: -100px -15px;            
+        }
+        li:nth-child(3).active{
+            background-position: -80px -15px;            
+        }
+        li:nth-child(4).active{
+            background-position: -60px -15px;            
+        }
+        li:nth-child(5).active{
+            background-position: -40px -15px;            
+        }
+        li:nth-child(6).active{
+            background-position: -20px -15px;            
+        }
+        .news{
+            height:50px;
+            width:120px;
+            margin-right:10px;
+            margin-top:20px;
+            float:left;
+            line-height:50px;
+            text-align: center;
+        }
+        .bg0{
+            background: rgb(128, 128, 128,0.5);
+        }
+        .bg1{
+            background: rgba(189, 8, 235, 0.5);
+        }
+        .bg2{
+            background: rgba(240, 5, 5, 0.7);
+        }
+        .bg3{
+            background: rgba(5, 157, 218, 0.5);
+        }
+        .bg4{
+            background: rgba(236, 116, 4, 0.7);
+        }
+        .bg5{
+            background: rgba(79, 235, 7, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <ul>
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        
+        <div class="news bg0">时事新闻</div>
+        <div class="news bg0">娱乐新闻</div>
+    </div>
+    <script src="../jquery-1.12.4.js"></script>
+    <script>
+        $("li").on("click",function(){
+            // $("li").removeClass("active");
+            // $(this).addClass("active");
+            $(this).addClass("active").siblings().removeClass("active");
+
+            var $val = $(this).index();
+            $(".news").attr("class","news bg"+$val);
+            
+        })
+    </script>
+    
+</body>
+</html>
