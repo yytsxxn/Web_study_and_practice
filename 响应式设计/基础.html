@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div1{
+            background: rgb(221, 14, 14);
+        }
+        @media screen and (max-width:960px){
+            /* 屏幕宽度小于等于960px时显示 */
+            #div1{
+                background: rgb(223, 247, 9);
+            }
+        }
+        @media screen and (max-width:768px){
+            #div1{
+                background: rgb(9, 247, 148);
+            }
+        }
+        @media screen and (min-width:320px){
+            /* 冲突时 写在下面的会覆盖上面的 */
+            #div1{
+                background: rgb(8, 24, 240);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">hahaha</div>
+    
+</body>
+</html>

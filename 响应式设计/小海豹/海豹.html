@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h3{
+            width:960px;
+            height: 100px;
+            line-height: 100px;
+            font-size:50px;
+            text-align: center;
+            background: #bbb5b5;
+            margin:50px auto 0;
+        }
+        .img-box{
+            width:960px;
+            margin:50px auto 0;
+        }
+        .img-box img{
+            width:100%;
+        }
+        .x,.xx{
+            display: none;
+        }
+        .xxx{
+            display: block;
+        }
+        .content{
+            width:960px;
+            overflow: hidden;
+            margin:0 auto;
+
+        }
+        .left{
+            width:630px;
+            height: 400px;
+            background: rgb(241, 3, 3);
+            float:left;
+            display: table;
+        }
+        .right{
+            width:300px;
+            height:400px;
+            background: rgb(3, 75, 230);    
+            float:right;
+            display: table;
+        }
+        p{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        @media screen and (max-width:960px){
+            h3,.content,.img-box{
+                width:100%;
+            }
+            .x,.xxx{
+                display:none;
+            }
+            .xx{
+                display:block;
+            }
+            .left{
+                width:66%;
+            }
+            .right{
+                width:31%;
+            }
+        }
+        @media screen and (max-width:480px){
+            .xxx,.xx{
+                display:none;
+            }
+            .x{
+                display:block;
+            }
+            .left{
+                width:100%;
+                float:none;
+            }
+            .right{
+                width:100%;
+                float:none;
+            }           
+        }
+    </style>
+</head>
+<body>
+    <h3>页头</h3>
+    <h3>标题</h3>
+    <div class="img-box">
+        <img src="img/01_s_2x.jpg" class="xx">
+        <img src="img/01_s.jpg" class="x">
+        <img src="img/01.jpg" class="xxx">
+    </div>
+    <div class="content">
+        <div class="left"><p>这是左边这是左边这是左边这是左边这是左边这是左边这是左边这是左边这是左边这是左边</p></div>
+        <div class="right"><p>这是右边这是右边这是右边这是右边这是右边这是右边这是右边这是右边这是右边这是右边</p></div>
+    </div>
+    <h3>页尾</h3>
+</body>
+</html>
