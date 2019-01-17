@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: .28rem;
+}
+li{list-style: none;}
+#nav-bar{
+    height: 1.01rem;
+    background: #06c1ae;
+    border-bottom: 1px solid #21897d;
+    display: flex;
+}
+#nav-bar .area{
+    width:1.67rem;
+    font-size: 0.32rem;
+    color: #fff;
+    height: 1.01rem;
+    line-height: 1.01rem;
+    text-align: center;
+}
+#nav-bar .my{
+    width:0.94rem;
+    font-size: 0.32rem;
+    color: #fff;
+    height: 1.01rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+#nav-bar input{
+    flex:1;
+}
+.list .circle{
+    width:0.8rem;
+    height:.8rem;
+    background: #ff0036;
+    display: block;
+    margin:0 auto;
+    border-radius: 50%;
+}
+
+.list .txt{
+    font-size:.24rem;
+}
+.list li{
+    padding-top:0.2rem;
+    float: left;
+    width:20%;
+    text-align: center;
+}
+.like{
+    padding-left: 0.2rem;
+    margin-top:0.2rem;
+}
+.like-list li{
+    display: flex;
+}
+.like-list li img{
+    width:1.8rem;
+    height:1.8rem;
+}
+.like-list .like-intro{
+    flex: 1;
+    margin-left:0.2rem;
+}
