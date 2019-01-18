@@ -27,6 +27,48 @@
         //         }
         //     })(i)
         // }
+        
+        //暂时性死区
+        // var a = 5;
+        // function fn(){
+        //     console.log(a);
+        //     let a = 10;//报错 ： a is not defined
+        // }
+        // fn();
+
+        // var a = 5;
+        // function fn(){
+        //     let a = 10;
+        //     console.log(a);//输出：10
+        // }
+        // fn();
+        // console.log(a);//输出：5 
+
+        // var a = 5;
+        // function fn(){
+        //     // （ var a; ）
+        //     console.log(a);
+        //     var a = 10;
+        // }   //输出：undefined  变量提升
+        // fn();
+        // console.log(a);//输出：5
+
+        // var a = 5;
+        // function fn(){
+        //     console.log(a);
+        //     a = 10;
+        // }   //输出：5
+        // fn();
+        // console.log(a);//输出：10
+
+
+        // var a = 5;
+        // function fn(){
+        //     var a = 10;
+        //     console.log(a);
+        // }   //输出：10
+        // fn();
+        // console.log(a); //输出：5
 
     </script>
 </body>
