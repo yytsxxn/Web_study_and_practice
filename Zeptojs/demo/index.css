@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    touch-action: none;
+}
+.hide{
+    display: none;
+}
+.page{
+    height:100%;
+    width:100%;
+    position: absolute;
+}
+.page-1{
+    background:#083846 ;  
+    height:100%;
+    width:100%;
+    position: absolute;
+}
+.page-1 .img1{
+    width:248px;
+    position: absolute;
+    top:2%;
+    left:50%;
+    margin-left:-124px;
+}
+.page-1 .img2{
+    width: 185px;
+    position: absolute;
+    top:62%;
+    left:50%;
+    margin-left:-92px;
+}
+.page .common-img{
+    width: 25px;
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    margin-left: -12px;
+}
+.page-2{
+    background: #8b6dbf;
+}
+.page-2 .img1{
+    width:158px;
+    position: absolute;
+    top:2%;
+    left:50%;
+    margin-left: -79px;
+}
+.page-2 .img2{
+    width:240px;
+    position: absolute;
+    top:28%;
+    left:50%;
+    margin-left:-120px;
+}
+.page-2 .img3{
+    width:241px;
+    position: absolute;
+    top:36%;
+    left:50%;
+    margin-left:-120.5px;
+}
+.page-2 .img4{
+    width: 248px;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    margin-left: -124px;
+}
+.page-2 .img5{
+    width: 142px;
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    margin-left: -71px;
+}
+.page-2 .img6{
+    width: 20px;
+    position: absolute;
+    top: 87%;
+    left: 50%;
+    margin-left: -10px;
+}
+.page-3{
+    background: #123845;
+}
+.page-3 .img1{
+    width: 280px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    margin-left: -140px;
+}
+.page-3 .img2{
+    width: 260px;
+    position: absolute;
+    left: 50%;
+    top: 67%;
+    margin-left: -130px;
+}
+/* 动画 */
+
+.moveFromTop{
+    animation: moveFromTop 0.6s ease forwards;
+}
+@keyframes moveFromTop{
+    from{
+        transform: translateY(-100%);
+    }
+}
+.moveFromLeft{
+    animation: moveFromLeft 0.6s ease forwards;
+}
+@keyframes moveFromLeft{
+    from{
+        transform: translateX(-100%);
+    }
+}
+.commonIcon{
+    animation: commonIcon 1.2s ease infinite forwards;
+}
+@keyframes commonIcon{
+    0%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+.moveFromBottom{
+    animation:  moveFromBottom .6s ease both;
+}
+@keyframes moveFromBottom{
+    from{
+        transform: translateY(100%);
+    }
+}
+.moveScale{
+    animation: moveScale 0.6s ease;
+}
+@keyframes moveScale{
+    from{
+        transform: scale(0.4);
+    }
+}
+.moveCircle{
+    animation: moveCircle 1.2s ease-in-out;
+}
+@keyframes moveCircle{
+    0% {
+        transform: translateY(-80%);
+        opacity: 0.1;
+    }
+    5% {
+        transform: translateY(-80%);
+        opacity: 0.3;
+    }
+    35% {
+        transform: translateY(10%);
+        opacity: 0.8;
+    }
+    60% {
+        transform: translateY(-30%);
+        opacity: 0.8;
+    }
+    65% {
+        transform: translateY(-20%);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+.moveBack{
+    animation: moveBack .6s ease-in both;
+    transform-origin: 50% 100%;
+}
+@keyframes moveBack{
+    0% {
+        transform: translateY(-100%) rotateX(90deg);
+        opacity: 0.3;
+    }
+    50% {
+        animation-timing-function: ease-out;
+        transform: translateY(-50%) translateZ(-200px) rotateX(45deg);
+    }
+}
+.moveBackJoin{
+    animation: moveBackJoin 0.6s ease both;
+    transform-origin: 100% 50%;
+}
+@keyframes moveBackJoin{
+    50% {
+        animation-timing-function: ease-out;
+        transform: translateY(50%) translateZ(-200px) rotateX(-45deg);
+    }
+}
+
+
+.moveToTop{
+    animation: moveToTop 0.6s ease forwards;
+}
+@keyframes moveToTop{
+    to{
+        transform: translateY(-100%);
+    }
+}
+.moveToBottom{
+    animation: moveToBottom 0.6s ease forwards;
+}
+@keyframes moveToBottom{
+    to{
+        transform: translateY(200%);
+    }
+}
