@@ -13,10 +13,10 @@
 </head>
 <body>
     <div id="app">
-        <input type = "text" v-model = "msg">
+        <input type = "text" v-model = "msg" @keyup = "filter()">
         <button @click = "add()">add</button>
         <ul>
-            <li v-for = "(obj,index) in List" :class = "{active:obj.isA}" @click = "change(obj)">
+            <li v-for = "(obj,index) in showList" :class = "{active:obj.isA}" @click = "change(obj)">
                 {{obj.val}} 
             <button @click = "del(index)">del</button>   
             </li>
@@ -30,19 +30,38 @@
                 msg:"",
                 List:[ 
                     
-                ],               
+                ],
+                showList:[
+
+                ]               
             },
             methods:{
                 add(){
                     this.List.push({val:this.msg,isA:false});
-                    this.msg = "";                  
+                    this.msg = ""; 
+                    this.showList = [...this.List];                 
                 },
                 del(idx){
                     this.List.splice(idx,1);
+                    this.showList = [...this.List];
                 },
                 change(obj){
                     obj.isA = !obj.isA; 
-                }
+                },
+                filter(){
+                    // 过滤的时候不能直接修改原数组 所以弄一个showList   过滤list数组中val 中包含 this.msg的 
+                    var arr = this.List.filter((obj) => {
+                        // console.log(obj.val.includes(this.msg));
+                        return obj.val.includes(this.msg);
+                    })
+                    this.showList = arr;
+                },
+                // check(){
+                //     var arr = this.List.check((obj) => {
+                //         return obj.val.includes(this.msg);
+                //     })
+                //     this.showList = arr;
+                // }
             }
         });
     </script>
