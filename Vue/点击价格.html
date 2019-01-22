@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .title{
+            height:50px;
+            line-height: 50px;
+            margin:0 auto;
+            font-size:30px;
+            text-align: center;
+        }
+        li{
+            list-style: none;
+            width:400px;
+            height:50px;
+            line-height: 50px;
+            font-size: 30px;
+            background: rgb(16, 114, 206);
+            padding: 10px 10px;
+            margin:0 auto;
+            cursor:pointer;
+        }
+        .active{
+            background: rgb(179, 233, 52);
+        }
+        .price{
+            width: 500px;
+            height:50px;
+            line-height: 50px;
+            font-size: 30px;
+            border-top:1px solid black;
+            margin:10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="title">services</div>
+        <ul>
+            <li v-for = "obj in list" :class="{active:obj.isA}" @click = "add(obj)">
+                {{obj.name}}
+                <span style = "float:right">{{obj.num}}</span>
+            </li>
+        </ul>
+        <div class="price">
+            <span>total:</span>
+            <span style = "float:right">{{price}}</span>
+        </div>
+        
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                price:0,
+                list:[
+                    {
+                        name:"aaa",
+                        num:123,
+                        isA:false
+                    },
+                    {
+                        name:"bbb",
+                        isA:false,
+                        num:456
+                    },
+                    {
+                        name:"ccc",
+                        isA:false,
+                        num:789
+                    },
+                    {
+                        name:"ddd",
+                        isA:false,
+                        num:908
+                    },
+                    {
+                        name:"eee",
+                        isA:false,
+                        num:125
+                    }
+                ],
+            },
+            methods:{
+                add(obj){
+                    obj.isA = !obj.isA;
+                    if(obj.isA == true)
+                        this.price += obj.num;
+                    else
+                    this.price -= obj.num;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
