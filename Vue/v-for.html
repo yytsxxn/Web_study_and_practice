@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{count}}
+        <button v-on:click = "add(4)">click+4</button>
+        <button @click = "add(8)">click+8</button>
+        <ul>
+            <li v-for="person in classList">
+                {{person}} 
+           </li>
+        </ul>
+        
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                classList:["math","English","Chinese"],
+                count:0
+            },
+            methods:{
+                add(num){
+                    this.classList.push("PE");
+                    this.count += num;
+                }
+            }
+        });
+        
+      
+    
+    
+    
+    </script>
+    
+</body>
+</html>

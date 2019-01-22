@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-html</title>
+    <style>
+    #div1{
+        width: 200px;
+        height: 200px;
+        background: #ff0000;
+    }
+    #div2{
+        width: 100px;
+        height: 100px;
+        background: #0000ff;
+    }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div id="div1" @click="change1()">
+            <!-- @click.stop  修饰符  阻止事件冒泡  -->
+            <!-- @click.prevent  修饰符  阻止默认行为  -->
+
+            <div id="div2" @click="change2()"></div>
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                
+            },
+            methods: {
+                change1(){
+                    console.log('div1 111');
+                },
+                change2(){
+                    // event.stopPropagation();
+                    console.log('div2 222');
+                }
+            }
+        })
+    
+       
+    
+    </script>
+    
+</body>
+</html>
