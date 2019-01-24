@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        是否需要额外付费设施：<input type="checkbox" v-model = "true"><br>
+        <ul>
+            <li v-for = "obj in choice">
+                <span>{{obj.name}}</span>(<span>{{obj.price}}</span>)
+            </li>
+        </ul>
+        <br>订单费用信息<br>
+        <ul>
+            <li>群力花园豪华型(400)</li>
+            <li ></li>
+        </ul>
+        总金额：{{total}}
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                total:0,
+                choice:[{
+                    name:沙发,
+                    price:100
+                },
+                {
+                    name:床,
+                    price:200
+                },
+                {
+                    name:WiFi,
+                    price:30
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
