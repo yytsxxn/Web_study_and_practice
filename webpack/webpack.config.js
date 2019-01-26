@@ -4,7 +4,8 @@ const HtmlPlugin = require('html-webpack-plugin');
 const ExtractTtextWebpackPlugin = require('extract-text-webpack-plugin');
 const glob = require('glob');
 const PurifyCSSPlugin = require('purifycss-webpack');
-const entry = require('./webpack_config/entry_webpack')
+const entry = require('./webpack_config/entry_webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     mode:'development',
     // development开发环境  production(生产环境) 
@@ -83,7 +84,14 @@ module.exports = {
             // filename:'test.html' 
         }),
         new ExtractTtextWebpackPlugin('./index.css'),
-        new webpack.BannerPlugin('小仙女学习史')
+        new webpack.BannerPlugin('小仙女学习史'),
+        new webpack.ProvidePlugin({
+            $:'jquery'
+        }),
+        new CopyWebpackPlugin([{
+            from:__dirname+"/src/public",
+            to:'./public'
+        }])
     ], 
     devServer:{
         contentBase:path.resolve(__dirname,'dist'),

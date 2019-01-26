@@ -1,0 +1,7 @@
+cnpm install webpack-dev-server -D
+cnpm install html-webpack-plugin -D
+cnpm install css-loader style-loader -D
+cnpm install extract-text-webpack-plugin -D
+
+这是我的项目。。。
+
