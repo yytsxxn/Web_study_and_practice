@@ -26,8 +26,8 @@
         var adiv = document.getElementById("div");
         adiv.onmousedown = function(e){
             // 鼠标按下时据div左侧和上方的固定距离
-            var left = e.clientX;
-            var top = e.clientY;
+            var left = e.clientX - adiv.offsetLeft;
+            var top = e.clientY - adiv.offsetTop;
 
             // document.onmousemove 按下鼠标滑动 防止过快划出div时不跟着移动
             document.onmousemove = function(e){
