@@ -15,7 +15,8 @@
             height: 200px;
             background: rgba(143, 92, 202,0.75);
             position:absolute;
-           
+           left: 0;
+           top: 0;
         }
     </style>
 </head>
@@ -24,12 +25,20 @@
     <script>
         var adiv = document.getElementById("div");
         adiv.onmousedown = function(e){
+            // 鼠标按下时据div左侧和上方的固定距离
             var left = e.clientX;
             var top = e.clientY;
 
-            this.onmousemove = function(e){
-                adiv.style.left = adiv.offsetWidth + e.clientX - left;
-                adiv.style.top = adiv.offsetHeight + e.clientY - top;
+            // document.onmousemove 按下鼠标滑动 防止过快划出div时不跟着移动
+            document.onmousemove = function(e){
+                // 鼠标距离屏幕左边的距离e.clientX - 固定距离
+                adiv.style.left = e.clientX - left + "px";
+                adiv.style.top = e.clientY - top + "px";
+            }
+
+            // up事件写在document上 如果写在adiv上鼠标走出document区域无法up
+            document.onmouseup= function(){
+                document.onmousemove = null;
             }
         }
     </script>
