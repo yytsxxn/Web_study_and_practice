@@ -1,17 +1,35 @@
 <template>
   <div id="app">
+    <button @click="prev">&lt;</button>
+    <button @click="next">&gt;</button>
+    <button @click="home">goHome</button>
     <div id="nav">
       <router-link to="/home">redirect</router-link> |
       <router-link to="/about">About</router-link> |
       <!-- <router-link to="/mine">Mine</router-link> -->
-      <router-link :to="{name:'mine',params:{name:'yyt',age:'20'}}">Mine</router-link>
+      <router-link :to="{name:'mine',params:{name:'yyt',age:'20'}}">Mine</router-link> |
+      <router-link to="/notfindtest">notfindtest</router-link>
       <transition name="fade">
         <router-view/>
     </transition>
     </div>
   </div>
 </template>
-
+<script>
+    export default {
+        methods:{
+          prev(){
+            this.$router.go(-1);
+          },
+          next(){
+            this.$router.go(1);
+          },
+          home(){
+            this.$router.push('/');
+          }
+        }
+    }
+</script>
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

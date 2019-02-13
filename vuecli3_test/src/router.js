@@ -4,10 +4,12 @@ import Home from './views/Home.vue';
 import Mine from './views/Mine.vue';
 import A from './views/A.vue';
 import B from './views/B.vue';
+import Error from './views/Error.vue';
 
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -40,6 +42,10 @@ export default new Router({
           component: B
         },
       ],
+    },
+    {
+      path: '/notfindtest',
+      component: Error
     },
   ],
 });
