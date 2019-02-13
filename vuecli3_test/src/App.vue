@@ -8,7 +8,8 @@
       <router-link to="/about">About</router-link> |
       <!-- <router-link to="/mine">Mine</router-link> -->
       <router-link :to="{name:'mine',params:{name:'yyt',age:'20'}}">Mine</router-link> |
-      <router-link to="/notfindtest">notfindtest</router-link>
+      <router-link to="/notfindtest">notfindtest</router-link>|
+      <router-link to="/count">count</router-link>
       <transition name="fade">
         <router-view/>
     </transition>

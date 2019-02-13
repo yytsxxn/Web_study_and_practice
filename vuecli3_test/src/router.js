@@ -5,6 +5,7 @@ import Mine from './views/Mine.vue';
 import A from './views/A.vue';
 import B from './views/B.vue';
 import Error from './views/Error.vue';
+import Count from './views/Count.vue';
 
 Vue.use(Router);
 
@@ -46,6 +47,10 @@ export default new Router({
     {
       path: '/notfindtest',
       component: Error
+    },
+    {
+      path: '/count',
+      component: Count
     },
   ],
 });
