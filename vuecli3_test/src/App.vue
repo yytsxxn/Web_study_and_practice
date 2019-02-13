@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
+      <router-link to="/home">redirect</router-link> |
       <router-link to="/about">About</router-link> |
       <!-- <router-link to="/mine">Mine</router-link> -->
       <router-link :to="{name:'mine',params:{name:'yyt',age:'20'}}">Mine</router-link>
