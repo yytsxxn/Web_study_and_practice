@@ -21,8 +21,9 @@
         line-height: 1rem;
         font-size: 0.5rem;
         text-align: center;
-        color: white;
+        color: #ffffff;
         position: fixed;
+        top: 0;
         width: 100%;
     }
     .goHome{
