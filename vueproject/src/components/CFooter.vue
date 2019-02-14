@@ -24,6 +24,7 @@
         methods:{
             change(obj){
                 this.bg = obj.bgColor;
+                this.$emit('changeHeaderColor',this.bg);
             }
         }
     }

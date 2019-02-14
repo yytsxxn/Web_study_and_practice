@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header>
+        <header :style="{background: hbgc}">
             <span class="goHome">首页</span>
             电影
         </header>
@@ -9,7 +9,7 @@
 
 <script>
     export default {
-        
+        props:["hbgc"]
     }
 </script>
 
