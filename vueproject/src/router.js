@@ -13,10 +13,12 @@ export default new Router({
     {
       path:'/movie',
       component:Movie
-    },{
+    },
+    {
       path:'/music',
       component:Music
-    },{
+    },
+    {
       path:'/book',
       component:Book
     },

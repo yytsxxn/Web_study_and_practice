@@ -1,5 +1,5 @@
 <template>
-    <div class="footer" :style="{background:bg}">
+    <div class="footer" :style="{background:obj.bgColor}">
         <ul>
             <!-- <li><router-link to="./movie">电影</router-link></li>
             <li><router-link to="./music">音乐</router-link></li>
@@ -20,11 +20,12 @@
                 bg:''
             }
         },
-        props:["menu"],
+        props:["menu","obj"],
         methods:{
             change(obj){
                 this.bg = obj.bgColor;
-                this.$emit('changeHeaderColor',this.bg);
+                // 通过$emit 向父组件app 传参this.bg
+                this.$emit('changeHeader',obj);
             }
         }
     }
