@@ -32,9 +32,8 @@
                 </div>
             </li>
         </ul>
-        <div id="loading" v-show = "flag">
-            <img src="loading.gif">
-        </div>
+        <img class="loading" v-show="imgFlag" src="@/assets/img/loading.gif">
+        <div class="bottom" v-show = "bottomFlag">到底了</div>
     </div>
 </template>
 
@@ -44,7 +43,8 @@ import Axios from 'axios';
         data(){
             return {
                 movieList:[],
-                flag:false
+                imgFlag:false,
+                bottomFlag:false
             }
         },
         created(){
@@ -56,26 +56,28 @@ import Axios from 'axios';
                 // console.log(document.documentElement.clientHeight);
                 // 整个滚动区的高度
                 // console.log(document.documentElement.scrollHeight);
-                if( document.documentElement.scrollTop +document.documentElement.clientHeight ==  document.documentElement.scrollHeight){
+                if( (document.documentElement.scrollHeight - document.documentElement.scrollTop - document.documentElement.clientHeight) < 1 && !this.bottomFlag){
                     this.movieRequest();
                 }
             }
         },
         methods:{
             movieRequest(){
-                this.flag = true;
+                this.imgFlag = true;
                 // 豆瓣接口 跨域访问
-                Axios.get("https://bird.ioliu.cn/v1?url=https://api.douban.com/v2/movie/in_theaters?city=广州&start="+this.movieList.length+"&count=10")
+                // Axios.get("https://bird.ioliu.cn/v1?url=https://api.douban.com/v2/movie/in_theaters?city=广州&start="+this.movieList.length+"&count=10")
                 // 本地模拟接口
-                // Axios.get("/movie"+this.movieList.length+".json")
+                Axios.get("/movie"+this.movieList.length+".json")
                 .then((result)=>{
-                    console.log(result);
-                    this.movieList = result.data.subjects;
-                    this.flag = false;  
+                //     console.log(result);
+                // this.movieList = result.data.subjects;
+                    this.movieList = [...this.movieList,...result.data.subjects];
+                    this.imgFlag = false;
+                    if(this.movieList.length == result.data.total){
+                        this.bottomFlag = true;
+                    }
                 })
-                .catch();  
-                document.documentElement.scrollTop = 0;    
-                 
+                .catch();    
             }
         }
     }
@@ -98,11 +100,17 @@ import Axios from 'axios';
         flex-flow: 1;
         margin-left: 0.3rem;
     }
-    #loading{
+    .loading{
         width: 3rem;
         position: fixed;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
+    }
+    .bottom{
+        height: 0.5rem;
+        line-height: 0.5rem;
+        font-size: 0.4rem;
+        text-align: center;
     }
 </style>
