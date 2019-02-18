@@ -39,7 +39,8 @@
         text-align: center;
         font-size: 0.3rem;
         width: 100%;
-        position: fixed;
+        /* position: fixed; */
+        position: absolute;
         bottom: 0;
     }
     /* 弹性盒模型 [将底部的文字横成一排] */
