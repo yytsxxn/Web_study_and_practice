@@ -6,6 +6,7 @@ import Book from './views/book/Book.vue'
 import Photo from './views/photo/Photo.vue'
 import MusicContent from './views/music/MusicContent.vue'
 import MovieDetail from './views/movie/MovieDetail.vue'
+import Slide from './components/Slide.vue'
 
 Vue.use(Router)
 
@@ -15,7 +16,7 @@ export default new Router({
   routes: [
     {
       path:'/',
-      component:Movie
+      redirect:'/movie'
     },
     {
       path:'/movie',
@@ -40,6 +41,10 @@ export default new Router({
     {
       path:'/movieDetail/:movieId',
       component:MovieDetail
+    },
+    {
+      path:'/slide',
+      component:Slide
     }
   ]
 })
