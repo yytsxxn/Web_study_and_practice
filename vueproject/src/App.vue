@@ -59,7 +59,6 @@ export default {
     if(result.length){
       this.obj = result[0];
     }
-    
   }
 };
 </script>
