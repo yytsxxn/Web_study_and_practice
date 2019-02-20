@@ -1,7 +1,7 @@
 <template>
     <div>
         <header :style="{background:obj.bgColor}">
-            <span class="goHome">首页</span>
+            <span class="goHome" @click="goHome">首页</span>
             {{obj.name}}
         </header>
     </div>
@@ -9,7 +9,12 @@
 
 <script>
     export default {
-        props:["obj"]
+        props:["obj"],
+        methods:{
+            goHome(){
+                this.$router.push('/');
+            }
+        }
     }
 </script>
 
