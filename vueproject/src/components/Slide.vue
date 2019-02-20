@@ -8,7 +8,7 @@
             </transition-group>
         </ul>
         <ul class="btns">
-            <li v-for="(i,index) in imgs.length" :key="index" :class="{active:index == iNow}"></li>
+            <li v-for="(val,index) in imgs.length" :key="index" :class="{active:index == iNow}"></li>
         </ul>
     </div>
 </template>
@@ -17,15 +17,15 @@
     export default {
         data(){
             return {
-                imgs:[
-                    "https://img14.360buyimg.com/n1/s200x200_jfs/t4747/62/804815710/55498/3dcf9193/58e880e6N1ca7f917.jpg",
-                    "https://img14.360buyimg.com/n1/s200x200_jfs/t9508/97/2285719018/62961/99c5b1b7/59f299b4Nc9e78adb.jpg",
-                    "https://img14.360buyimg.com/n1/s200x200_jfs/t1/7311/2/7919/337148/5c09dfdcEc928c9d7/1fb356f338fd88c5.jpg",
-                    "https://img11.360buyimg.com/n1/s200x200_jfs/t1/19709/14/2822/206853/5c21adb6E7c9bb79e/5b840bc23c3ed2dc.jpg"
-                ],
+                // imgs:[
+                //     "https://img3.doubanio.com/lpic/s24468373.jpg",
+                //     "https://img3.doubanio.com/lpic/s27102925.jpg",
+                //     "https://img3.doubanio.com/lpic/s6989253.jpg"
+                // ],
                 iNow:0
             }
         },
+        props:["imgs"],
         created(){
             setInterval(() => {
                 this.iNow++;

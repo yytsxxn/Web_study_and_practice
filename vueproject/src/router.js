@@ -42,10 +42,11 @@ export default new Router({
       path:'/movieDetail/:movieId',
       component:MovieDetail
     },
-    {
-      path:'/slide',
-      component:Slide
-    }
+    // 配置一个/slide路径测试Slide组件
+    // {
+    //   path:'/slide',
+    //   component:Slide
+    // }
   ]
 })
 
