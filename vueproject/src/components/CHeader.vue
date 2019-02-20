@@ -21,8 +21,7 @@
         text-align: center;
         font-size: 0.5rem;
         color: #fff;
-        /* position: fixed; */
-        position: absolute;
+        position: fixed;
         top:0;
         width:100%;
         

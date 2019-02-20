@@ -7,6 +7,7 @@ import Photo from './views/photo/Photo.vue'
 import MusicContent from './views/music/MusicContent.vue'
 import MovieDetail from './views/movie/MovieDetail.vue'
 import Slide from './components/Slide.vue'
+import PhotoDetail from './views/photo/PhotoDetail.vue'
 
 Vue.use(Router)
 
@@ -46,7 +47,11 @@ export default new Router({
     // {
     //   path:'/slide',
     //   component:Slide
-    // }
+    // },
+    {
+      path:'/photoDetail',
+      component:PhotoDetail
+    }
   ]
 })
 
