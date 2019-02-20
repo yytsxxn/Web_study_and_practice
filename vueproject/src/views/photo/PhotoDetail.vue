@@ -1,6 +1,7 @@
 <template>
     <div>
-        我是大图页面
+        <!-- 我是大图页面 -->
+        {{$route.params.photoId}}
     </div>
 </template>
 

@@ -49,7 +49,7 @@ export default new Router({
     //   component:Slide
     // },
     {
-      path:'/photoDetail',
+      path:'/photoDetail/:photoId',
       component:PhotoDetail
     }
   ]

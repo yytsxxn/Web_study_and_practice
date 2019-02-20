@@ -1,7 +1,7 @@
 <template>
     <div class="photo">
         <!-- 我是图片页面 -->
-        <img v-for="(photoSrc,index) in photo" :key="index" :src="photoSrc.src" @click="goDetail"/>
+        <img v-for="(photoSrc,index) in photo" :key="index" :src="photoSrc.src" @click="goDetail(index)"/>
     </div>
 </template>
 
@@ -20,8 +20,8 @@ import Axios from 'axios'
             })
         },
         methods:{
-            goDetail(){
-                this.$router.push("/photoDetail")
+            goDetail(photoId){
+                this.$router.push("/photoDetail/"+photoId)
             }
         }
     }
