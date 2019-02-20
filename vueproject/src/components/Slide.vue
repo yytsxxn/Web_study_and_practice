@@ -38,14 +38,19 @@
 </script>
 
 <style scoped>
+    .slide-wraper{
+        position: relative;
+        height:6rem;
+        overflow: hidden;
+    }
     .slide li{
         width: 100%;
         position: absolute;
         left: 0;
-        top: 1rem;
+        top: 0;
     }
     .slide img{
-        height: 5rem;
+        height: 6rem;
         width: 100%;
     }
     .btns{
