@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="browser.min.js"></script>
+    <script type="text/babel">
+        class Main extends React.Component{
+            constructor(params) {
+                super(params);
+                this.state = {
+                    todoList:['吃饭','睡觉','打豆豆']
+                }
+                this.addHandler = this.addHandler.bind(this);
+            }
+            addHandler(val){
+                console.log(val); 
+                // 新建一个数组进行push操作，如果新数组（局部变量）与Main中的数组（属性）重名可以进行简写
+                // let todoList = [...this.state.todoList];
+                // todoList.push(val);
+                // this.setState({
+                // ES6中的对象属性的简写
+                //     todoList
+                // })
+                let newList = [...this.state.todoList];
+                newList.push(val);
+                this.setState({
+                    todoList:newList
+                })
+            }
+            render(){
+                return (
+                    <div>
+                        <h1>简单的todolist</h1>
+                        <Add addList={this.addHandler}></Add>
+                        <List todos={this.state.todoList}></List>
+                    </div>
+                )
+            }
+        }
+        class Add extends React.Component{
+            render(){
+                return (
+                    <div>
+                        <input type="text" ref={ input => {this.myInput = input}}/>
+                        <button onClick={ () => {
+                            this.props.addList(this.myInput.value);
+                        } }>add</button>
+                    </div>
+                )
+            }
+        }
+        class List extends React.Component{
+            render(){
+                return (
+                    <div>
+                        <ul>
+                            {
+                                this.props.todos.map(function(val,index) {
+                                    return <li key={index}> {val} </li>
+                                })
+                            }
+                        </ul>
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(<Main></Main>,document.getElementById("root"));
+    </script>
+    
+</body>
+</html>
