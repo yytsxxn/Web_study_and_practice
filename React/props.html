@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="browser.min.js"></script>
+    <script type="text/babel">
+        // 函数 props —— 形参
+        // let MyComponent = (props) => {
+        //     return (
+        //         <div>
+        //             <h1> {props.title} </h1>
+        //             <p> {props.desc} </p>
+        //             <h5> {props.children} </h5>
+        //         </div>
+        //     )
+        // }
+
+            // 类 props —— 属性
+        class MyComponent extends React.Component{
+            render(){
+                return (
+                    <div>
+                        <h1> {this.props.title} </h1>
+                        <p> {this.props.desc} </p>
+                        <h5> {this.props.children} </h5>
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(<MyComponent title="哈哈哈哈" desc="这是一个组件。。">hahahahhahhahhaha</MyComponent>,document.getElementById("root"));
+    </script>
+    
+</body>
+</html>
