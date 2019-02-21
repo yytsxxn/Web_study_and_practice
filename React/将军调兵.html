@@ -53,10 +53,10 @@
                         <h2>将军 {this.props.generalName} 有士兵：{this.props.soldierNum} </h2>
                         <input type="number" ref={ input => {this.myInput = input} } />
                         <button onClick={ () => {
-                            this.props.changeNum(this.props.generalName,this.myInput.);
+                            this.props.changeNum(this.props.generalName,this.myInput.value);
                             this.myInput.value = "";
                         } }>调兵</button>
-                    </div>value
+                    </div>
                 )
             }
         }
