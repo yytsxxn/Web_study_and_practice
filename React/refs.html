@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="browser.min.js"></script>
+    <script type="text/babel">
+        class MyComponent extends React.Component{
+            constructor(props){
+                super(props);
+                this.clickHandler = this.clickHandler.bind(this);
+            }
+            // 取DOM元素
+            clickHandler(event){
+                console.log( this.refs.name.value );    
+                //文本框内输入的内容
+
+                console.log(this.refs.btn);
+                //<button>click</button>
+
+                console.log( event.target );    
+                //<button>click</button>
+
+                console.log(this.myInput);
+                // <input type="text">
+                
+            }
+
+
+            render(){
+                return (
+                    <div>
+                        <input type="text" ref="name"/>
+                        <input type="text" ref={ input => {this.myInput = input}} />
+                        <button ref="btn" onClick={this.clickHandler}>click</button>
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(<MyComponent></MyComponent>,document.getElementById("root"));
+    </script>
+    
+</body>
+</html>
