@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .red{
+            background: #eb3939;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="browser.min.js"></script>
+    <script type="text/babel">
+        class MyComponent extends React.Component{
+            
+            render(){
+                let style = {
+                    background:'rgb(196,105,122)',
+                    border:'2px solid blue'
+                }
+                return (
+                    <div>
+                        <h1 style={style}>内联样式——定义变量</h1>
+                        <h1 style={
+                            {
+                                
+                                background:'yellow',
+                                color:'red',
+                                border:'2px solid black'
+                            }
+                        }>内联样式——直接写</h1>
+                        <h1 className="red">className 在head的style里设置样式</h1>
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(<MyComponent></MyComponent>,document.getElementById("root"));
+    </script>
+</body>
+</html>
