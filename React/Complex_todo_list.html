@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .active{
+            background: rgb(248, 138, 59);  
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="react.development.js"></script>
+    <script src="react-dom.development.js"></script>
+    <script src="browser.min.js"></script>
+    <script type="text/babel">
+        class Main extends React.Component{
+            constructor(params) {
+                super(params);
+                this.state = {
+                    todoList:[
+                        {
+                            id:1,
+                            name:'吃饭',
+                            isActive:false
+                        },
+                        {
+                            id:2,
+                            name:'睡觉',
+                            isActive:false
+                        },
+                        {
+                            id:3,
+                            name:'打豆豆',
+                            isActive:true   
+                        }
+                    ],
+                    showList:[
+                        {
+                            id:1,
+                            name:'吃饭',
+                            isActive:false
+                        },
+                        {
+                            id:2,
+                            name:'睡觉',
+                            isActive:false
+                        },
+                        {
+                            id:3,
+                            name:'打豆豆',
+                            isActive:true   
+                        }
+                    ],
+                    total:3,
+                    finish:1
+                }
+                this.addList = this.addList.bind(this);
+                this.changeListActive = this.changeListActive.bind(this);
+                this.deleteList = this.deleteList.bind(this);
+                this.searchList = this.searchList.bind(this);
+            }
+            addList(val){
+                let total = ++this.state.total;
+                let newList = [...this.state.todoList];
+                newList.push({name:val,isActive:false,id:(new Date()).getTime()});
+                this.setState({
+                    todoList:newList,
+                    total,
+                    showList:newList
+                })
+            }
+            changeListActive(id){
+                let index = this.state.todoList.findIndex((obj,index)=>{
+                    return obj.id == id;
+                })
+                let newList = [...this.state.todoList];
+                let finish = this.state.finish;
+                newList[index].isActive = !newList[index].isActive;
+                console.log(newList[index].isActive);
+                if(newList[index].isActive == true){
+                    finish++;
+                }
+                else{
+                    finish--;
+                }
+                this.setState({
+                    todoList:newList,
+                    showList:newList,
+                    finish
+                })
+            }
+            deleteList(id){
+                let total = --this.state.total;
+                let newList = this.state.todoList.filter((obj)=>{
+                    return obj.id != id
+                })
+                let finish = 0;
+                let i = 0;
+                for(i=0;i<newList.length;i++){
+                    if(newList[i].isActive == true){
+                        finish++;
+                    }
+                }
+                this.setState({
+                    todoList:newList,
+                    total,
+                    showList:newList,
+                    finish
+                })
+            }
+            searchList(value){
+                let showList = this.state.todoList.filter( (obj)=>{
+                    return obj.name.includes(value);
+                })
+                this.setState({
+                    showList
+                })
+            }
+            render(){
+                return (
+                    <div>
+                        <h1>Complex_todo_list</h1>
+                        <Search searchList={this.searchList}></Search>
+                        <Add addList={this.addList}></Add>
+                        <List showList={this.state.showList} 
+                            total={this.state.total} 
+                            finish={this.state.finish} 
+                            changeListActive={this.changeListActive} 
+                            deleteList={this.deleteList}>
+                        </List>
+                    </div>
+                )
+            }
+        }
+        class Search extends React.Component{
+            render(){
+                return (
+                    <div>
+                        搜索：<input type="text" onChange={
+                            (event)=>{
+                                this.props.searchList(event.target.value);
+                        }}/>
+                    </div>
+                )
+            }
+        }
+        class Add extends React.Component{
+            constructor(params) {
+                super(params);
+                this.add = this.add.bind(this);
+            }
+            add(){
+                if(this.myInput.value != ""){
+                    this.props.addList(this.myInput.value);
+                    this.myInput.value = "";
+                }
+            }
+            render(){
+                return (
+                    <div>
+                        添加：<input type="text" ref={ input => {this.myInput = input}}/>
+                        <button onClick={this.add}>保存任务</button>
+                    </div>
+                )
+            }
+        }
+        class List extends React.Component{
+            render(){
+                return (
+                    <div>
+                        <ul>
+                            {
+                                this.props.showList.map((val,index) => {
+                                    return (
+                                        <li key={val.id} className={val.isActive ? 'active' : ''}>    
+                                            <input type="checkbox" name={val.id} defaultChecked={val.isActive} onClick={()=>{
+                                                this.props.changeListActive(val.id);
+                                            }}/> 
+                                            <span> {val.name} </span>
+                                            <button onClick={()=>{
+                                                this.props.deleteList(val.id);
+                                            }} >删除</button>
+                                        </li>
+                                    )
+                                })
+                            }
+                            <li key="last">{this.props.finish}项任务已完成/共{this.props.total}项任务</li>
+                        </ul>
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(<Main></Main>,document.getElementById("root"));
+    </script>
+    
+</body>
+</html>
