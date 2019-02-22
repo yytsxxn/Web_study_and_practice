@@ -140,10 +140,18 @@
             render(){
                 return (
                     <div>
-                        搜索：<input type="text" onChange={
+                        搜索：<input type="text" 
+                        onChange={
                             (event)=>{
                                 this.props.searchList(event.target.value);
-                        }}/>
+                        }} 
+                        onBlur={
+                            (event)=>{
+                                // console.log("不搜索了");
+                                // console.log(event.target.value);
+                                event.target.value = "";
+                            }
+                        }/>
                     </div>
                 )
             }
@@ -162,7 +170,7 @@
             render(){
                 return (
                     <div>
-                        添加：<input type="text" ref={ input => {this.myInput = input}}/>
+                        添加：<input type="text" ref={ input => {this.myInput = input}} />
                         <button onClick={this.add}>保存任务</button>
                     </div>
                 )
