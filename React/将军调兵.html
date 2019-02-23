@@ -24,13 +24,22 @@
             }
             changeNum(name,val){
                 val = parseInt(val);
+                console.log(val);
+                console.log(this.state['num' + name]);
+                
+                
                 if(this.state.total >= val){
-                    this.setState({
-                        total:this.state.total-val,
-                        // 字符串拼接，由name取到numA/numB
-                        ['num'+name]:this.state['num'+name]+val
+                    if(val < 0 && -val > this.state['num'+name]){
+                        alert("你没有那么多兵");
+                    }
+                    else{
+                        this.setState({
+                            total:this.state.total-val,
+                            // 字符串拼接，由name取到numA/numB
+                            ['num'+name]:this.state['num'+name]+val
 
-                    })
+                        })
+                    }
                 }
                 else{
                     alert("士兵数量不足");
