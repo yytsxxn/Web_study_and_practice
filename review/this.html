@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+    <script>
+        function a() {
+            console.log(this);  
+        }
+        a(); 
+        //Window
+
+        setTimeout(function(){
+            console.log(this);  
+        },10); 
+        //Window
+
+        var aLi = document.getElementsByTagName('li');
+        for (var i = 0; i < aLi.length; i++) {
+            aLi[i].onclick = function(){
+                console.log(this);  
+            }
+        }
+        //<li>111</li> <li>222</li> <li>333</li>
+
+        for (var i = 0; i < aLi.length; i++) {
+            aLi[i].onclick = function(){
+                setTimeout(function(){
+                    console.log(this);
+                },500);
+            }
+        }
+        //Window  Window  Window
+
+        var obj = {
+            name:'zs',
+            age:20,
+            say:function(){
+                console.log(this);
+            }
+        }
+        obj.say();
+        //Object  {age:20, name: "zs", say: f()}
+        
+        // 构造函数 this指的是new出来的实例化对象
+        function Person(name,age){
+            this.name = name,
+            this.age = age,
+            this.say = function(){
+                //console.log( this.name +"Hehe");
+                console.log(this);
+            }
+        }
+        var p1 = new Person("zs",20);
+        p1.say();
+        //Person {age:20, name: "zs", say: f()}
+
+    </script>
+</body>
+</html>
