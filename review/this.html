@@ -41,15 +41,14 @@
         }
         //Window  Window  Window
 
-        var obj = {
-            name:'zs',
-            age:20,
-            say:function(){
-                console.log(this);
+        for (var i = 0; i < aLi.length; i++) {
+            aLi[i].onclick = function(){
+                setTimeout((function(){
+                    console.log(this);
+                }).bind(this),500);
             }
-        }
-        obj.say();
-        //Object  {age:20, name: "zs", say: f()}
+        }        
+        //<li>111</li> <li>222</li> <li>333</li>
         
         // 构造函数 this指的是new出来的实例化对象
         function Person(name,age){
@@ -63,6 +62,31 @@
         var p1 = new Person("zs",20);
         p1.say();
         //Person {age:20, name: "zs", say: f()}
+
+        var obj = {
+            name:'zs',
+            age:20,
+            say:function(msg,mag1,msg2){
+                console.log(this,msg,mag1,msg2);
+            }
+        }
+        obj.say();
+        //{name: "zs", age:20, say: f} undefined undefined undefined
+
+        obj.say("我是obj","哈哈","呵呵");
+        //{name: "zs", age:20, say: f} "我是obj","哈哈","呵呵"
+
+        //改变this指向
+        var obj2 = {
+            name:'xiaowu'
+        }
+        obj.say.call(obj2,"我是小吴","哈哈","呵呵");
+        //{name: "xoapwu"} "我是小吴","哈哈","呵呵"
+        obj.say.apply(obj2,["我是小吴","哈哈","呵呵"]);
+        //{name: "xoapwu"} "我是小吴","哈哈","呵呵"        
+        obj.say.bind(obj2);//仅改变this指向没有调用
+        obj.say.bind(obj2,"我是小吴","哈哈","呵呵")();
+        //{name: "xoapwu"} "我是小吴","哈哈","呵呵"
 
     </script>
 </body>
