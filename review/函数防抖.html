@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click</button>
+    <script>
+        function debounce(fn, delay) {
+            var timer = null;
+            return function(){
+                clearTimeout(timer);
+                timer = setTimeout(function(){
+                    //fn();
+                    fn.apply(this);
+                }.bind(this), delay);
+            }
+            /*
+            //箭头函数 ES6
+            return function(){
+                clearTimeout(timer);
+                timer = setTimeout(() => {
+                    //fn();
+                    fn.apply(this);
+                }, delay);
+            }
+            */
+        }
+        var oBtn = document.getElementById('btn');
+        oBtn.onclick = debounce(function(){
+            console.log(Date.now());
+            console.log(this); //fn()——Window  {fn.apply(this)}.bind(this)|| 箭头函数——<button id="btn">click</button>
+        }, 1000);
+    </script>
+</body>
+</html>
