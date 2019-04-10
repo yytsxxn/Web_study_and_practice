@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: rgb(241, 22, 22);
+        }
+        #div2{
+            width: 100px;
+            height: 100px;
+            background: rgb(10, 42, 224);
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        div1
+        <div id="div2">
+            div2
+        </div> 
+    </div>
+    <script>
+        var oDiv1 = document.getElementById('div1');
+        var oDiv2 = document.getElementById('div2');
+        oDiv1.onclick = function(e) {
+            console.log("div1 click1");
+        }
+        oDiv1.onclick = function(e) {
+            console.log("div1 click2");
+        }
+        // 点击div1 输出 div1 click2  
+        // 写在后面的点击事件会覆盖写在前面的点击事件
+        
+        // addEventListener 可以绑定多个事件且都会执行
+        oDiv1.addEventListener('click', function(){
+            console.log("div1 click1");
+        },false);
+        // true代表捕获  false代表冒泡
+        oDiv1.addEventListener('click', function(){
+            console.log("div1 click2");
+        },false);
+        // 点击div1  div1 click1  div1 click2
+        
+        oDiv1.addEventListener('click', function(){
+            console.log("div1 click 捕获");
+        },true);
+        oDiv2.addEventListener('click', function(){
+            console.log("div2 click 捕获");
+        },true);
+        // 捕获从外到里
+
+        oDiv1.addEventListener('click', function(){
+            console.log("div1 click 冒泡");
+        },false);
+        oDiv2.addEventListener('click', function(){
+            console.log("div2 click 冒泡");
+        },false);
+        // 事件冒泡从里往外
+        
+        // 同时有捕获和冒泡的时候，会先捕获再冒泡 先从外往里 再从里往外
+        // div1 click 捕获
+        // div2 click 捕获
+        // div2 click 冒泡
+        // div1 click 冒泡
+        
+    </script>
+</body>
+</html>
